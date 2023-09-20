@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/Intro/Intro.runs/impl_1/fpga_basicIO.tcl"
+  variable script "C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/Projeto 0/Intro/Intro.runs/impl_1/fpga_basicIO.tcl"
   variable category "vivado_impl"
 }
 
@@ -124,8 +124,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   open_checkpoint fpga_basicIO_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/Intro/Intro.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/Projeto 0/Intro/Intro.cache/wt} [current_project]
 set_property TOP fpga_basicIO [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
