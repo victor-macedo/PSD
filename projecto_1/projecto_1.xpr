@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/laris/Documents/GitHub/PSD/projecto_1/projecto_1.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/projecto_1/projecto_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2e76d039c90648f9a7ac673595f31ef0"/>
@@ -90,6 +90,7 @@
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/datapath.vhd">
+<<<<<<< Updated upstream
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -102,7 +103,15 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/main.vhd">
+=======
+>>>>>>> Stashed changes
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/main.vhd">
+        <FileInfo RelPath="main.vhd">
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -124,7 +133,11 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+<<<<<<< Updated upstream
         <Option Name="TopModule" Val="circuit"/>
+=======
+        <Option Name="TopModule" Val="datapath"/>
+>>>>>>> Stashed changes
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -138,7 +151,11 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+<<<<<<< Updated upstream
         <Option Name="TopModule" Val="circuit"/>
+=======
+        <Option Name="TopModule" Val="datapath"/>
+>>>>>>> Stashed changes
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
