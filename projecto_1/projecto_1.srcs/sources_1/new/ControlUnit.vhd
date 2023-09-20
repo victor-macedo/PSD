@@ -1,19 +1,19 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
 
-
-entity main is
+entity ControlUnit is
     port (
      clk, rst, exec : in std_logic;
      instr : in std_logic_vector (2 downto 0);
      enables : out std_logic_vector (1 downto 0);
      selectors : out std_logic_vector (2 downto 0)
      );
-end main;
+end ControlUnit;
 
-architecture Behavioral of main is
-    type fsm_states is (s_initial, s_end, ADD, 
+
+
+architecture Behavioral of ControlUnit is
+type fsm_states is (s_initial, s_end, ADD, 
      SUB, MULS, NANDL,NORL, SHIFT, LOAD1, LOAD2 );
     
     signal currstate, nextstate: fsm_states;
@@ -71,11 +71,13 @@ architecture Behavioral of main is
                 when SHIFT =>
                      nextstate <= s_end;
                      selectors<="101";
-                     enables<="10";    
+                     enables<="10"; 
+                --O Load1 que se refere ao R1 depende do enable do menos significativo
                 when LOAD1 =>
                      nextstate <= s_end;
                      selectors<="110";
                      enables<="11";
+                     
                 when LOAD2 =>
                      nextstate <= s_end;
                      selectors<="111";
