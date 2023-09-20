@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../Intro.srcs/sim_1/imports/PSD/circuito_tb.vhd" \
-
-# Do not sort compile order
-nosort
