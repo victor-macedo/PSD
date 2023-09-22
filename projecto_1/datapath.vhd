@@ -6,7 +6,7 @@ entity datapath is
 port (
     data_in : in std_logic_vector (11 downto 0);
     sel_add_sub, sel_mux : in std_logic;
-    selector : in std_logic_vector (2 downto 0);
+    selector,enable : in std_logic_vector (2 downto 0);
     en_accum, en_r1 : in std_logic;
     clk, rst_accum : in std_logic;
     res, reg1 : out std_logic_vector (7 downto 0));
@@ -64,26 +64,24 @@ begin
     res_load <= data_in;
         
         
- --FALTA FAZER O ALGORITIMO DO ENABLE, 
- --O enable só deve ser 1 durante a operação load1, do contrario o valor é  0
-    -- multiplexer
-  with selector select
-    accum <= res_add   when "000", 
-             res_sub   when "001",
-             res_mul   when "010",
-             res_nand  when "011",
-             res_nor   when "100",
-             res_shift when "101",
-  
-             res_load when others;
+ 
+            -- multiplexer
+          with selector select
+            accum <= res_add   when "000", 
+                     res_sub   when "001",
+                     res_mul   when "010",
+                     res_nand  when "011",
+                     res_nor   when "100",
+                     res_shift when others;
 -- output
     reg1 <= register1;
     res <= accum;
 
+ --O enable só deve ser 1 durante a operação load1, do contrario o valor é  0
 -- accumulator
     process (clk)
         begin
-            if clk'event and clk='1' then
+            if clk'event and clk='1' and enable="10" then
                 if rst_accum='1' then
                     accum <= X"00";
                     elsif en_accum = '1' then
@@ -94,7 +92,7 @@ begin
 -- register R1
 process (clk)
     begin
-        if clk'event and clk='1' then
+        if clk'event and clk='1' and enable ="01" then
             if en_r1 = '1' then
                 register1 <= data_in;
             end if;
