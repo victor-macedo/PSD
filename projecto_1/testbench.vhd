@@ -39,7 +39,7 @@ begin
     signal rst : std_logic := '0';
     signal exec : std_logic := '0';
     signal instr : std_logic_vector(1 downto 0) := (others => '0');
-    signal data_in : std_logic_vector(7 downto 0) := (others => '0’);
+    signal data_in : std_logic_vector(7 downto 0) := (others => '0');
     -- Outputs
     signal res : std_logic_vector(7 downto 0);
     signal reg1 : std_logic_vector(7 downto 0);
