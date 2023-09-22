@@ -6,7 +6,7 @@ entity circuit is
     port (
      clk, rst, exec: in std_logic;
      instr : in std_logic_vector(2 downto 0);
-     data_in: in std_logic_vector(7 downto 0);
+     data_in: in std_logic_vector(11 downto 0);
      reg1, res: out std_logic_vector(7 downto 0)
      );
 end circuit;
@@ -21,10 +21,13 @@ architecture Behavioral of circuit is
     
     component datapath
          port(data_in : in std_logic_vector (11 downto 0);
-         --sel_add_sub, sel_mux : in std_logic;
+         --sel_mux : in std_logic;
+         reg1: in std_logic_vector (11 downto 0);
          en_accum, en_r1 : in std_logic;
          clk, rst_accum : in std_logic;
-         res, reg1 : out std_logic_vector (7 downto 0));
+         selector: in std_logic_vector (2 downto 0);
+         res, reg2: out std_logic_vector (16 downto 0));
+         
      end component;
      signal enables : std_logic_vector(1 downto 0);
      signal sels : std_logic_vector(2 downto 0); 
@@ -39,8 +42,8 @@ begin
     inst_datapath: datapath port map (
      data_in => data_in, rst_accum => rst,
      en_accum => enables(1), en_r1 => enables(0),
-  --   sel_add_sub => sels(0), sel_mux => sels(1),
-     clk => clk, 
-     reg1 => reg1, res => res );
+     selector => selector,
+     clk => clk,
+     reg2 => reg2, res => res );
 
 end Behavioral;
