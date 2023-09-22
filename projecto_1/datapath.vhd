@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity datapath is
 port (
     data_in : in std_logic_vector (11 downto 0);
-    selector,enable : in std_logic_vector (2 downto 0);
+    selector : in std_logic_vector (2 downto 0);
     en_accum, en_r1 : in std_logic;
     clk, rst_accum : in std_logic;
     res : out std_logic_vector (16 downto 0);
@@ -58,8 +58,6 @@ begin
         accum(16)&accum(16)&accum(16)&accum(16)&accum(16)&accum(16)&accum(16)
         & accum(16 downto 7)                                                              when others;
         
- --Load 1
-    register1 <= data_in;
  
  --Load 2 
     res_load <= "00000" & data_in;
@@ -82,7 +80,7 @@ begin
 -- accumulator
     process (clk)
         begin
-            if clk'event and clk='1' and enable="10" then
+            if clk'event and clk='1' and en_accum='1' then
                 if rst_accum='1' then
                     accum <= "00000000000000000";
                     elsif en_accum = '1' then
@@ -93,7 +91,7 @@ begin
 -- register R1
 process (clk)
     begin
-        if clk'event and clk='1' and enable ="01" then
+        if clk'event and clk='1' and en_r1 ='1' then
             if en_r1 = '1' then
                 register1 <= data_in;
             end if;
