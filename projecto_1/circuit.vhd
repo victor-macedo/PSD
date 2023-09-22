@@ -13,7 +13,7 @@ entity circuit is
 end circuit;
 
 architecture Behavioral of circuit is
-    component control
+    component ControlUnit
          port( clk, rst, exec : in std_logic;
          instr : in std_logic_vector (2 downto 0);
          enables : out std_logic_vector (1 downto 0);
@@ -35,7 +35,7 @@ architecture Behavioral of circuit is
 
 
 begin
-    inst_control: control port map(
+    inst_control: ControlUnit port map(
      clk => clk, rst => rst, 
      exec => exec, instr => instr,
      enables => enables, selectors => selector);

@@ -43,10 +43,10 @@ type fsm_states is (s_initial, s_end, ADD,
                         elsif instr="101" then nextstate <= SHIFT;
                         elsif instr="110" then nextstate <= LOAD1 ;
                         elsif instr="111" then nextstate <= LOAD2;
-                        end if;
-                     end if;
-                selectors<="000";
-                enables<="00";
+                        end if;             
+                    end if;
+                    selectors<="000";
+                    enables<="00";
                 
                 when ADD =>
                      nextstate <= s_end;
@@ -82,6 +82,12 @@ type fsm_states is (s_initial, s_end, ADD,
                      nextstate <= s_end;
                      selectors<="111";
                      enables<="10";
+                when s_end =>
+                    if exec='0' then
+                    nextstate <= s_initial ;
+                    end if;
+                    selectors<="100";
+                    enables<="00";     
             end case;
         end process;
 end Behavioral;
