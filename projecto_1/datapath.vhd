@@ -13,7 +13,7 @@ port (
 end datapath;
 
 architecture Behavioral of datapath is
-    signal res_add, res_sub, res_nand, res_nor, res_alu, res_shift, res_load : std_logic_vector (16 downto 0);
+    signal res_add, res_sub, res_nand, res_nor, res_shift, res_load : std_logic_vector (16 downto 0);
     signal res_mul : std_logic_vector (28 downto 0);
     signal res_add_sg, res_sub_sg, accum_sg : signed (16 downto 0);
     signal r1_sg: signed (11 downto 0);
@@ -62,16 +62,6 @@ begin
  --Load 2 
     res_load <= "00000" & data_in;
         
-        
- 
-            -- multiplexer
-          with selector select
-            accum <= res_add   when "000", 
-                     res_sub   when "001",
-                     res_mul(16 downto 0)   when "010",
-                     res_nand  when "011",
-                     res_nor   when "100",
-                     res_shift when others;
 -- output
     reg1 <= register1;
     res <= accum;
@@ -83,15 +73,22 @@ begin
             if clk'event and clk='1' and en_accum='1' then
                 if rst_accum='1' then
                     accum <= "00000000000000000";
-                    elsif en_accum = '1' then
-                    accum <= res_alu;
-                end if;
+                else
+                    case selector is
+                         when "000" => accum <= res_add; 
+                         when "001" => accum <= res_sub;  
+                         when "010" => accum <= res_mul(16 downto 0);
+                         when "011" => accum <= res_nand;
+                         when "100" => accum <= res_nor;
+                         when others => accum <= res_shift;
+                    end case;
+            end if;
             end if;
         end process;
 -- register R1
 process (clk)
     begin
-        if clk'event and clk='1' and en_r1 ='1' then
+        if clk'event and clk='1' then
             if en_r1 = '1' then
                 register1 <= data_in;
             end if;
