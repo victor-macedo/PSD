@@ -24,13 +24,13 @@ architecture Behavioral of circuit is
          port(data_in : in std_logic_vector (11 downto 0);
          --sel_mux : in std_logic;
          reg1: out std_logic_vector (11 downto 0);
-         en_accum, en_r1 : in std_logic;
+         enables: in std_logic_vector (1 downto 0);
          clk, rst_accum : in std_logic;
          selector: in std_logic_vector (2 downto 0);
          res: out std_logic_vector (16 downto 0));
          
      end component;
-     signal enables : std_logic_vector(1 downto 0);
+     signal en_accum, en_r1 : std_logic;
      signal selector : std_logic_vector(2 downto 0); 
 
 
@@ -38,11 +38,11 @@ begin
     inst_control: ControlUnit port map(
      clk => clk, rst => rst, 
      exec => exec, instr => instr,
-     enables => enables, selectors => selector);
+     enables(1) => en_accum, enables(0) => en_r1, selectors => selector);
      
     inst_datapath: datapath port map (
      data_in => data_in, rst_accum => rst,
-     en_accum => enables(1), en_r1 => enables(0),
+     enables(1) => en_accum, enables(0) => en_r1,
      selector => selector, reg1 => reg1,
      clk => clk,
      res => res );

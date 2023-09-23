@@ -6,7 +6,8 @@ entity datapath is
 port (
     data_in : in std_logic_vector (11 downto 0);
     selector : in std_logic_vector (2 downto 0);
-    en_accum, en_r1 : in std_logic;
+    enables : in std_logic_vector (1 downto 0);
+    --en_accum, en_r1 : in std_logic;
     clk, rst_accum : in std_logic;
     res : out std_logic_vector (16 downto 0);
     reg1 : out std_logic_vector (11 downto 0));
@@ -20,7 +21,10 @@ architecture Behavioral of datapath is
     signal res_mul_sg : signed (28 downto 0);
     signal accum : std_logic_vector (16 downto 0) := (others => '0');
     signal register1 : std_logic_vector (11 downto 0) := (others => '0');
+    signal en_r1, en_accum: std_logic;
 begin
+    en_accum <= enables(1);
+    en_r1 <= enables(0);
 -- adder
     r1_sg <= signed(register1);
     accum_sg <= signed(accum);
