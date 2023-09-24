@@ -55,11 +55,12 @@ architecture Behavioral of testbench is
      instr <= "110" after 40 ns, -- load1
      "000" after 120 ns, -- add
      "010" after 200 ns, -- mult
-     "011" after 280 ns, -- nand
-     "100" after 360 ns, -- nor
-     "101" after 440 ns, -- shift
-     "001" after 520 ns, -- sub
-     "111" after 600 ns; -- load2
+     "100" after 280 ns, -- nor
+     "101" after 360 ns, -- shift
+     "011" after 440 ns, -- nand
+     "111" after 520 ns, -- load2
+     "001" after 600 ns; -- sub
+     
      --FALTA ESCREVER O RESTO
      exec <= '1' after 40 ns, '0' after 80 ns,
      '1' after 120 ns, '0' after 160 ns,

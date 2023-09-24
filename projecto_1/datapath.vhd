@@ -60,7 +60,7 @@ begin
         accum(16)&accum(16)&accum(16)&accum(16)&accum(16)&accum(16)
         & accum(16 downto 6)                                                     when "110",
         accum(16)&accum(16)&accum(16)&accum(16)&accum(16)&accum(16)&accum(16)
-        & accum(16 downto 7)                                                              when others;
+        & accum(16 downto 7)                                                      when others;
         
  
  --Load 2 
@@ -84,7 +84,8 @@ begin
                          when "010" => accum <= res_mul(16 downto 0);
                          when "011" => accum <= res_nand;
                          when "100" => accum <= res_nor;
-                         when others => accum <= res_shift;
+                         when "101" => accum <= res_shift;
+                         when others => accum <= res_load;
                     end case;
             end if;
             end if;
