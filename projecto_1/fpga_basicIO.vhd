@@ -55,6 +55,8 @@ architecture Behavioral of fpga_basicIO is
   signal btn, btnDeBnc : std_logic_vector(4 downto 0);
   signal btnCreg, btnUreg, btnLreg, btnRreg, btnDreg: std_logic;   -- registered input buttons
   signal sw_reg : std_logic_vector(15 downto 0);  -- registered input switches
+  signal comp2_res : std_logic_vector(16 downto 0);
+  signal comp2_datain : std_logic_vector(11 downto 0);
   
   component disp7
   port (
@@ -91,12 +93,16 @@ architecture Behavioral of fpga_basicIO is
 
 begin
   led <= sw_reg;
- 
+  comp2_res <= "1"&(not(res(15 downto 0))+1) when res(16)='1'
+                else "0"&res(15 downto 0);
+  comp2_datain <= "1"&(not(sw_reg(10 downto 0))+1) when sw_reg(11)='1'
+                else "0"&sw_reg(10 downto 0);
+                
   dact <= "1111";
 
   inst_disp7: disp7 port map(
-      digit3 => reg1(7 downto 4), digit2 => reg1(3 downto 0), digit1 => res(7 downto 4), digit0 => res(3 downto 0),
-      dp3 => btnLreg, dp2 => btnDreg, dp1 => btnRreg, dp0 => btnUreg,  
+      digit3 => comp2_res(7 downto 4), digit2 => comp2_res(3 downto 0), digit1 => comp2_res(7 downto 4), digit0 => comp2_res(3 downto 0),
+      dp3 => res(16), dp2 => res(16), dp1 => btnRreg, dp0 => btnUreg,  
       clk => clk,
       dactive => dact,
       en_disp_l => an,
@@ -108,7 +114,7 @@ begin
       rst => btnUreg,
       exec => btnRreg,
       instr => sw_reg(15 downto 13),
-      data_in => sw_reg(11 downto 0),
+      data_in => comp2_datain(11 downto 0),
       reg1 => reg1, res => res);
      
   -- Debounces btn signals
