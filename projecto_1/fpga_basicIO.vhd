@@ -57,6 +57,7 @@ architecture Behavioral of fpga_basicIO is
   signal sw_reg : std_logic_vector(15 downto 0);  -- registered input switches
   signal comp2_res : std_logic_vector(16 downto 0);
   signal comp2_datain : std_logic_vector(11 downto 0);
+  signal led_digit :  std_logic_vector(16 downto 0);
   
   component disp7
   port (
@@ -99,9 +100,12 @@ begin
                 else "0"&sw_reg(10 downto 0);
                 
   dact <= "1111";
+  with sw_reg(12) select
+        led_digit <= comp2_res when '0',
+                   "00000"&comp2_datain when others;
 
   inst_disp7: disp7 port map(
-      digit3 => comp2_res(7 downto 4), digit2 => comp2_res(3 downto 0), digit1 => comp2_res(7 downto 4), digit0 => comp2_res(3 downto 0),
+      digit3 => led_digit(15 downto 12), digit2 => led_digit(11 downto 8), digit1 => led_digit(7 downto 4), digit0 => led_digit(3 downto 0),
       dp3 => res(16), dp2 => res(16), dp1 => btnRreg, dp0 => btnUreg,  
       clk => clk,
       dactive => dact,

@@ -76,7 +76,7 @@ type fsm_states is (s_initial, s_end, ADD,
                 when LOAD1 =>
                      nextstate <= s_end;
                      selectors<="110";
-                     enables<="11";
+                     enables<="01";
                      
                 when LOAD2 =>
                      nextstate <= s_end;

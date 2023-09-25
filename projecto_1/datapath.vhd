@@ -74,10 +74,10 @@ begin
 -- accumulator
     process (clk)
         begin
-            if clk'event and clk='1' and en_accum='1' then
+            if clk'event and clk='1' then
                 if rst_accum='1' then
                     accum <= "00000000000000000";
-                else
+                elsif en_accum='1' then
                     case selector is
                          when "000" => accum <= res_add; 
                          when "001" => accum <= res_sub;  
@@ -94,7 +94,9 @@ begin
 process (clk)
     begin
         if clk'event and clk='1' then
-            if en_r1 = '1' then
+            if rst_accum='1' then
+                register1 <= "000000000000";
+            elsif en_r1 = '1' then
                 register1 <= data_in;
             end if;
         end if;
