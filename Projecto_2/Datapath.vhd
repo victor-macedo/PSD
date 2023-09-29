@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Datapath is
   Port ( 
-    enables : in std_logic_vector (4 downto 0); --Conferir n° de registros necessários
+    enable : in std_logic_vector (1 downto 0); --Conferir n° de registros necessários
     clk, reset, done : in std_logic;
     selector: in std_logic; --Conferir n° de estados da control unit
     p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
@@ -37,6 +37,9 @@ signal en_r1, en_r2: std_logic;
 signal reg1_sg : signed (17 downto 0);
 
 begin
+ en_r2 <= enable(1);
+ en_r1 <= enable(0);
+
 --Mux1 entrada
     process (clk)
         begin
