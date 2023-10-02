@@ -7,23 +7,34 @@ end testbench;
 architecture Behavioral of testbench is
 
     component circuit
-        port(clk, rst, exec: in std_logic;
-         instr : in std_logic_vector(2 downto 0);
-         data_in: in std_logic_vector(11 downto 0);
-         reg1: out std_logic_vector(11 downto 0);
-         res: out std_logic_vector(16 downto 0));
+        port (clk, rst, selector : in std_logic;
+    p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p2_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p3_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p4_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    w1_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    res: out std_logic_vector (18 downto 0));
     end component;
 
 
     -- Inputs
     signal clk : std_logic := '0';
     signal rst : std_logic := '0';
-    signal exec : std_logic := '0';
-    signal instr : std_logic_vector(2 downto 0) := (others => '0');
-    signal data_in : std_logic_vector(11 downto 0) := (others => '0');
+    signal selector : std_logic := '1';
+    signal p1_reg :  std_logic_vector (7 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    signal p2_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
+    signal p3_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
+    signal p4_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
+    signal w1_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
+    signal w2_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
+    signal w3_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
+    signal w4_reg: std_logic_vector (7 downto 0) := (others => '0'); -- Tamanho de -128 a 127
     -- Outputs
-    signal res : std_logic_vector(16 downto 0);
-    signal reg1 : std_logic_vector(11 downto 0);
+    signal res : std_logic_vector(18 downto 0);
+   
     -- Clock period definitions
     constant clk_period : time := 10 ns;
     
@@ -31,10 +42,11 @@ architecture Behavioral of testbench is
      uut: circuit PORT MAP (
      clk => clk,
      rst => rst,
-     exec => exec,
-     instr => instr,
-     data_in => data_in,
-     reg1 => reg1,
+     selector => selector,
+     p1_reg => p1_reg, p2_reg => p2_reg,
+     p3_reg => p3_reg, p4_reg => p4_reg,
+     w1_reg => w1_reg, w2_reg => w2_reg,
+     w3_reg => w3_reg, w4_reg => w4_reg, 
      res => res
      );
     -- Clock definition
@@ -49,27 +61,31 @@ architecture Behavioral of testbench is
     
     rst <= '1' after 20 ns,
      '0' after 40 ns;
-     data_in <= "0000" & X"67" after 40 ns,
-     "0000" & X"12" after 200 ns,
-     "0000" & X"C3" after 360 ns;
-     instr <= "110" after 40 ns, -- load1
-     "000" after 120 ns, -- add
-     "010" after 200 ns, -- mult
-     "100" after 280 ns, -- nor
-     "101" after 360 ns, -- shift
-     "011" after 440 ns, -- nand
-     "111" after 520 ns, -- load2
-     "001" after 600 ns; -- sub
+     p1_reg <= X"67" after 40 ns,
+      X"12" after 200 ns,
+      X"C3" after 360 ns;
+     p2_reg <=  X"67" after 40 ns,
+        X"12" after 200 ns,
+      X"C3" after 360 ns;
+     p3_reg <= X"67" after 40 ns,
+     X"12" after 200 ns,
+   X"C3" after 360 ns;
+     p4_reg <= X"67" after 40 ns,
+     X"12" after 200 ns,
+     X"C3" after 360 ns;
+     w1_reg <= X"67" after 40 ns,
+      X"12" after 200 ns,
+      X"C3" after 360 ns;
+     w2_reg <= X"67" after 40 ns,
+     X"12" after 200 ns,
+     X"C3" after 360 ns;
+     w3_reg <= X"67" after 40 ns,
+     X"12" after 200 ns,
+      X"C3" after 360 ns;
+     w4_reg <= X"67" after 40 ns,
+     X"12" after 200 ns,
+    X"C3" after 360 ns;
      
-     --FALTA ESCREVER O RESTO
-     exec <= '1' after 40 ns, '0' after 80 ns,
-     '1' after 120 ns, '0' after 160 ns,
-     '1' after 200 ns, '0' after 240 ns,
-     '1' after 280 ns, '0' after 320 ns,
-     '1' after 360 ns, '0' after 400 ns,
-     '1' after 440 ns, '0' after 480 ns,
-     '1' after 520 ns, '0' after 560 ns,
-     '1' after 600 ns, '0' after 640 ns;
      wait;
     end process; 
 end Behavioral;
