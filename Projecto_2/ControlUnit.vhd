@@ -35,10 +35,12 @@ begin
             case currstate is
                 when s_initial =>
                      nextstate <= CYCLE1;
+                     done <= '0';
+                     enable <= "00";
                 when CYCLE1 =>
                      nextstate <= CYCLE2;
                      selector <= '0';
-                     enable <= "00";
+                     enable <= "00"; --MSB = Reg2, LSB = Reg1
                      done <= '0';
                 when CYCLE2 =>
                      nextstate <= CYCLE3;
@@ -51,6 +53,7 @@ begin
                      selector <= '0';
                      done <= '0';
                 when s_end =>
+                    enable <= "00";
                     done <= '1';
              end case;
         end process;      

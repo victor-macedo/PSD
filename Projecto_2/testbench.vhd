@@ -33,7 +33,7 @@ architecture Behavioral of testbench is
     signal w3_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
     signal w4_reg: std_logic_vector (7 downto 0) := (others => '0'); -- Tamanho de -128 a 127
     -- Outputs
-    signal res : std_logic_vector(18 downto 0);
+    signal res : std_logic_vector(18 downto 0) := (others => '0');
    
     -- Clock period definitions
     constant clk_period : time := 10 ns;
@@ -60,7 +60,11 @@ architecture Behavioral of testbench is
     
     
     rst <= '1' after 20 ns,
-     '0' after 40 ns;
+     '0' after 40 ns,
+     '1' after 220 ns,
+     '0' after 240 ns,
+     '1' after 385 ns,
+     '0' after 405 ns;
      p1_reg <= X"67" after 40 ns,
       X"12" after 200 ns,
       X"C3" after 360 ns;
