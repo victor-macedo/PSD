@@ -12,7 +12,8 @@ entity Circuit is
     w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
     w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
     w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-    res: out std_logic_vector (18 downto 0));
+    res: out std_logic_vector (18 downto 0);
+    feito: out std_logic);
 end Circuit;
 
 architecture Behavioral of Circuit is
@@ -34,7 +35,8 @@ architecture Behavioral of Circuit is
         w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
         w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
         w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-        res: out std_logic_vector (18 downto 0));
+        res: out std_logic_vector (18 downto 0);
+        feito: out std_logic);
          
      end component;
      signal en_reg2, en_reg1, done : std_logic;
@@ -54,6 +56,7 @@ begin
      reset => rst,
      selector => selector,
      clk => clk,
-     res => res, done => done );
+     res => res, done => done,
+     feito => feito );
 
 end Behavioral;

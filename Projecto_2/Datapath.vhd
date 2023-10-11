@@ -6,6 +6,7 @@ entity Datapath is
   Port ( 
     enable : in std_logic_vector (1 downto 0); --Conferir n° de registros necessários
     clk, reset, done : in std_logic;
+    feito : out std_logic;
     selector: in std_logic; --Conferir n° de estados da control unit
     p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
     p2_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
@@ -78,7 +79,7 @@ begin
     res_add1 <= std_logic_vector(res_add_sg1);
     
 -- adder2
-    --r1_sg <= signed(res_add_1); Conferir se faz sentido converter novamente
+    --r1_sg <= signed(res_add_1);
     reg1_sg <= signed(reg1);
     res_add_sg2 <= '0' & (reg1_sg + res_add_sg1);
     res_add2 <= std_logic_vector(res_add_sg2);
@@ -107,4 +108,5 @@ process (clk)
         end if;
     end process;
 res <= reg2;
+feito <= done;
 end Behavioral;
