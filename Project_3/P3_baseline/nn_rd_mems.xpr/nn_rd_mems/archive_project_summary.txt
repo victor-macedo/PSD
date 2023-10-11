@@ -1,0 +1,325 @@
+***************************************************************************************
+*                      PROJECT ARCHIVE SUMMARY REPORT
+*
+*                      (archive_project_summary.txt)
+*
+*  PLEASE READ THIS REPORT TO GET THE DETAILED INFORMATION ABOUT THE PROJECT DATA THAT
+*  WAS ARCHIVED FOR THE CURRENT PROJECT
+*
+* The report is divided into following five sections:-
+*
+* Section (1) - PROJECT INFORMATION
+*  This section provides the details of the current project that was archived
+*
+* Section (2) - INCLUDED/EXCLUDED RUNS
+*  This section summarizes the list of design runs for which the results were included
+*  or excluded from the archive
+*
+* Section (3) - ARCHIVED SOURCES
+*  This section summarizes the list of files that were added to the archive
+*
+* Section (3.1) - INCLUDE FILES
+*  This section summarizes the list of 'include' files that were added to the archive
+*
+* Section (3.1.1) - INCLUDE_DIRS SETTINGS
+*  This section summarizes the 'verilog include directory' path settings, if any
+*
+* Section (3.2) - REMOTE SOURCES
+*  This section summarizes the list of referenced 'remote' files that were 'imported'
+*  into the archived project
+*
+* Section (3.3) - SOURCES SUMMARY
+*  This section summarizes the list of all the files present in the archive
+*
+* Section (3.4) - REMOTE IP DEFINITIONS
+*  This section summarizes the list of all the remote IP's present in the archive
+*
+* Section (4) - JOURNAL/LOG FILES
+*  This section summarizes the list of journal/log files that were added to the archive
+*
+***************************************************************************************
+
+Section (1) - PROJECT INFORMATION
+---------------------------------
+Name      = nn_rd_mems
+Directory = C:/PrSD/nn_rd_mems
+
+WARNING: Please verify the compiled library directory path for the following property in the
+         current project. The path may point to an invalid location after opening this project.
+         This could happen if the project was unarchived in a location where this path is not
+         accessible. To resolve this issue, please set this property with the desired path
+         before launching simulation:-
+
+Property = compxlib.xsim_compiled_library_dir
+Path     = 
+
+Section (2) - Excluded Runs
+---------------------------
+The run results were excluded for the following runs in the archived project:-
+
+<synth_1>
+<images_mem_synth_1>
+<weights1_synth_1>
+<weights2_synth_1>
+<Q08toBCD_synth_1>
+<impl_1>
+<images_mem_impl_1>
+<weights1_impl_1>
+<weights2_impl_1>
+<Q08toBCD_impl_1>
+
+Section (3) - ARCHIVED SOURCES
+------------------------------
+The following sub-sections describes the list of sources that were archived for the current project:-
+
+Section (3.1) - INCLUDE FILES
+-----------------------------
+List of referenced 'RTL Include' files that were 'imported' into the archived project:-
+
+None
+
+Section (3.1.1) - INCLUDE_DIRS SETTINGS
+---------------------------------------
+List of the "INCLUDE_DIRS" fileset property settings that may or may not be applicable in the archived
+project, since most the 'RTL Include' files referenced in the original project were 'imported' into the
+archived project.
+
+<sources_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+<sim_1> fileset RTL include directory paths (INCLUDE_DIRS):-
+None
+
+Section (3.2) - REMOTE SOURCES
+------------------------------
+List of referenced 'remote' design files that were 'imported' into the archived project:-
+
+<Q08toBCD>
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/doc/dist_mem_gen_v8_0_changelog.txt
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.vho
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.veo
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_ooc.xdc
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.mif
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/simulation/dist_mem_gen_v8_0.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/sim/Q08toBCD.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.dcp
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_stub.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_stub.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_sim_netlist.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_sim_netlist.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/synth/Q08toBCD.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.xml
+c:/P3/q08toBCD.coe
+
+<images_mem>
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/doc/blk_mem_gen_v8_4_changelog.txt
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.vho
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.veo
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/summary.log
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/misc/blk_mem_gen_v8_4.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_ooc.xdc
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.mif
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/simulation/blk_mem_gen_v8_4.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/sim/images_mem.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.dcp
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_stub.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_stub.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_sim_netlist.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_sim_netlist.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/synth/images_mem.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.xml
+c:/P3/images.coe
+
+<weights1>
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/doc/blk_mem_gen_v8_4_changelog.txt
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1.vho
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1.veo
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/summary.log
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/misc/blk_mem_gen_v8_4.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1_ooc.xdc
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1.mif
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/simulation/blk_mem_gen_v8_4.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/sim/weights1.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1.dcp
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1_stub.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1_stub.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1_sim_netlist.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1_sim_netlist.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/synth/weights1.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights1/weights1.xml
+c:/P3/layer1.coe
+
+<weights2>
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/doc/blk_mem_gen_v8_4_changelog.txt
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2.vho
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2.veo
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/summary.log
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/misc/blk_mem_gen_v8_4.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2_ooc.xdc
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2.mif
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/simulation/blk_mem_gen_v8_4.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/sim/weights2.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2.dcp
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2_stub.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2_stub.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2_sim_netlist.v
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2_sim_netlist.vhdl
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/synth/weights2.vhd
+c:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.gen/sources_1/ip/weights2/weights2.xml
+c:/P3/layer2.coe
+
+<constrs_1>
+None
+
+<sim_1>
+None
+
+<sources_1>
+C:/P3/images.coe
+C:/P3/layer1.coe
+C:/P3/layer2.coe
+C:/P3/q08toBCD.coe
+
+<utils_1>
+None
+
+Section (3.3) - SOURCES SUMMARY
+-------------------------------
+List of all the source files present in the archived project:-
+
+<sources_1>
+./nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd
+./nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd
+./nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd
+./nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd
+./nn_rd_mems.srcs/sources_1/imports/P3/images.coe
+./nn_rd_mems.srcs/sources_1/imports/P3/layer1.coe
+./nn_rd_mems.srcs/sources_1/imports/P3/layer2.coe
+./nn_rd_mems.srcs/sources_1/imports/P3/q08toBCD.coe
+
+<constrs_1>
+./nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc
+
+<sim_1>
+./nn_rd_mems.srcs/sim_1/imports/P3/rd_mems_tb.vhd
+
+<utils_1>
+./nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp
+
+<images_mem>
+./nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci
+./nn_rd_mems.gen/sources_1/ip/images_mem/doc/blk_mem_gen_v8_4_changelog.txt
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.vho
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.veo
+./nn_rd_mems.gen/sources_1/ip/images_mem/summary.log
+./nn_rd_mems.gen/sources_1/ip/images_mem/misc/blk_mem_gen_v8_4.vhd
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_ooc.xdc
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.mif
+./nn_rd_mems.gen/sources_1/ip/images_mem/simulation/blk_mem_gen_v8_4.v
+./nn_rd_mems.gen/sources_1/ip/images_mem/sim/images_mem.v
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.dcp
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_stub.v
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_stub.vhdl
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_sim_netlist.v
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_sim_netlist.vhdl
+./nn_rd_mems.gen/sources_1/ip/images_mem/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./nn_rd_mems.gen/sources_1/ip/images_mem/synth/images_mem.vhd
+./nn_rd_mems.gen/sources_1/ip/images_mem/images_mem.xml
+./nn_rd_mems.srcs/sources_1/imports/P3/images.coe
+
+<weights1>
+./nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci
+./nn_rd_mems.gen/sources_1/ip/weights1/doc/blk_mem_gen_v8_4_changelog.txt
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1.vho
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1.veo
+./nn_rd_mems.gen/sources_1/ip/weights1/summary.log
+./nn_rd_mems.gen/sources_1/ip/weights1/misc/blk_mem_gen_v8_4.vhd
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1_ooc.xdc
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1.mif
+./nn_rd_mems.gen/sources_1/ip/weights1/simulation/blk_mem_gen_v8_4.v
+./nn_rd_mems.gen/sources_1/ip/weights1/sim/weights1.v
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1.dcp
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1_stub.v
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1_stub.vhdl
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1_sim_netlist.v
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1_sim_netlist.vhdl
+./nn_rd_mems.gen/sources_1/ip/weights1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./nn_rd_mems.gen/sources_1/ip/weights1/synth/weights1.vhd
+./nn_rd_mems.gen/sources_1/ip/weights1/weights1.xml
+./nn_rd_mems.srcs/sources_1/imports/P3/layer1.coe
+
+<weights2>
+./nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci
+./nn_rd_mems.gen/sources_1/ip/weights2/doc/blk_mem_gen_v8_4_changelog.txt
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2.vho
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2.veo
+./nn_rd_mems.gen/sources_1/ip/weights2/summary.log
+./nn_rd_mems.gen/sources_1/ip/weights2/misc/blk_mem_gen_v8_4.vhd
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2_ooc.xdc
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2.mif
+./nn_rd_mems.gen/sources_1/ip/weights2/simulation/blk_mem_gen_v8_4.v
+./nn_rd_mems.gen/sources_1/ip/weights2/sim/weights2.v
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2.dcp
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2_stub.v
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2_stub.vhdl
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2_sim_netlist.v
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2_sim_netlist.vhdl
+./nn_rd_mems.gen/sources_1/ip/weights2/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+./nn_rd_mems.gen/sources_1/ip/weights2/synth/weights2.vhd
+./nn_rd_mems.gen/sources_1/ip/weights2/weights2.xml
+./nn_rd_mems.srcs/sources_1/imports/P3/layer2.coe
+
+<Q08toBCD>
+./nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/doc/dist_mem_gen_v8_0_changelog.txt
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.vho
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.veo
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_ooc.xdc
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.mif
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/simulation/dist_mem_gen_v8_0.v
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/sim/Q08toBCD.v
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.dcp
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_stub.v
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_stub.vhdl
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_sim_netlist.v
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_sim_netlist.vhdl
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/synth/Q08toBCD.vhd
+./nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD.xml
+./nn_rd_mems.srcs/sources_1/imports/P3/q08toBCD.coe
+
+Section (3.4) - REMOTE IP DEFINITIONS
+-------------------------------------
+List of all the remote IP's present in the archived project:-
+
+<sources_1>
+None
+
+<images_mem>
+None
+
+<weights1>
+None
+
+<weights2>
+None
+
+<Q08toBCD>
+None
+
+./nn_rd_mems.board/basys3
+
+Section (4) - JOURNAL/LOG FILES
+-------------------------------
+List of Journal/Log files that were added to the archived project:-
+
+Source File = C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/vivado.jou
+Archived Location = ./nn_rd_mems/vivado.jou
+
+Source File = C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/vivado.log
+Archived Location = ./nn_rd_mems/vivado.log
+
