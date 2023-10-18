@@ -9,26 +9,26 @@ entity Datapath is
     selector: in std_logic; --Conferir n? de estados da control unit
     p : std_logic_vector (1023 downto 0);
     w1 : std_logic_vector (5119 downto 0);
-    res: out signed (15 downto 0)
+    res: out std_logic_vector (15 downto 0)
     );
 end Datapath;
 
 architecture Behavioral of Datapath is
 
 signal mul_1, mul_2, mul_3, mul_4 : signed (4 downto 0);  --Multiplicação de 1bit por 4bits
-
 signal res_add_sg1, res_add_sg2, res_add1, res_add2 : signed(5 downto 0);
 signal res_add_sg4 : signed(15 downto 0);
 signal res_add_sg3 : signed(6 downto 0);
-signal reg1,reg2 : signed(5 downto 0); --Não esta implementado ainda
-signal reg3 : signed(6 downto 0);
+signal reg_add_sg3 : signed(6 downto 0);
 signal accum: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits
 signal en_r1, en_r2, en_r3, en_r4: std_logic;
 signal reg1_sg : signed (17 downto 0);
+signal p_reg : std_logic_vector (1023 downto 0):= (p);
+signal w1_reg : std_logic_vector(5119 downto 0):=(w1);
 
 begin
  en_r4 <= enable(3);
- en_r3 <= enable(2);
+ en_r3 <= enable(0) and enable(1);
  en_r2 <= enable(1);
  en_r1 <= enable(0);
 
@@ -70,26 +70,17 @@ process (clk)
     begin
         if clk'event and clk='1' then
             if reset ='1' then
-                reg1 <= "000000";
-                reg2 <= "000000";
-                reg3 <= "0000000";
+                reg_add_sg3 <= "0000000";
                 accum <= "0000000000000000";
             else
                if en_r1 = '1' then
-                    reg1 <= res_add_sg1;
-                end if;
-                if en_r2 = '1' then
-                    reg2 <= res_add_sg2;
-                end if;
-                if en_r3 = '1' then
-                    reg3 <=res_add_sg3;
-                end if;
-                if en_r4 = '1' then
+                    p_reg <= std_logic_vector(shift_right(unsigned(p_reg),4));
+                    w1_reg <= std_logic_vector(shift_right(unsigned(w1_reg),20));
                     accum <=res_add_sg4;
                 end if;
-            end if;
+            end if;             
         end if;
     end process;
 
-res <= accum;
+res <= std_logic_vector(accum);
 end Behavioral;
