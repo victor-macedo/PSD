@@ -5,10 +5,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity Datapath is
   Port ( 
     enable : in std_logic_vector (3 downto 0); --Conferir n? de registros necess?rios
-    clk, reset, done : in std_logic;
-    selector: in std_logic; --Conferir n? de estados da control unit
-    p : std_logic_vector (1023 downto 0);
-    w1 : std_logic_vector (5119 downto 0);
+    clk, rst_dpath, done_1 : in std_logic;
+    p : in std_logic_vector (1023 downto 0);
+    w1 : in std_logic_vector (5119 downto 0);
     res: out std_logic_vector (15 downto 0)
     );
 end Datapath;
@@ -28,7 +27,7 @@ signal w1_reg : std_logic_vector(5119 downto 0):=(w1);
 
 begin
  en_r4 <= enable(3);
- en_r3 <= enable(0) and enable(1);
+ en_r3 <= enable(2);
  en_r2 <= enable(1);
  en_r1 <= enable(0);
 
@@ -69,7 +68,7 @@ begin
 process (clk)
     begin
         if clk'event and clk='1' then
-            if reset ='1' then
+            if rst_dpath ='1' then
                 reg_add_sg3 <= "0000000";
                 accum <= "0000000000000000";
             else
