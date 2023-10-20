@@ -9,7 +9,7 @@ entity Datapath is
     p : in std_logic_vector (31 downto 0);
     w1 : in std_logic_vector (15 downto 0); --REvisar formato
    -- w2 : in std_logic_vector (31 downto 0);
-    res: out std_logic_vector (15 downto 0)
+    res: out std_logic_vector (511 downto 0)
     );
 end Datapath;
 
@@ -20,17 +20,18 @@ signal res_add_sg1, res_add_sg2, res_add1, res_add2 : signed(4 downto 0);
 signal res_add_sg4 : signed(15 downto 0);
 signal res_add_sg3 : signed(5 downto 0);
 signal reg_add_sg3 : signed(5 downto 0);
-signal accum, relu: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits
-signal en_p, en_r2, en_r3, en_r4: std_logic;
+signal accum: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits
+signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
+signal en_pixel, en_weight, en_image, en_r2, en_r3, en_r4: std_logic;
 signal reg1_sg : signed (17 downto 0);
 signal p_reg : std_logic_vector (31 downto 0):= (p);
 signal w1_reg : std_logic_vector(15 downto 0):=(w1);
 
 begin
  en_r4 <= enable(3);
- en_r3 <= enable(2);
- en_r2 <= enable(1);
- en_p <= enable(0);
+ en_image <= enable(2);
+ en_weight <= enable(1);
+ en_pixel <= enable(0);
 
 --Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
     process (clk)
@@ -73,18 +74,24 @@ process (clk)
                 reg_add_sg3 <= "000000";
                 accum <= "0000000000000000";
             end if;  
-            if en_p = '1' then --Foi considerado que en_p sera ativado apenas ao final de todos os w
+            if en_pixel = '1' then --Foi considerado que en_p sera ativado apenas ao final de todos os w
                     p_reg <= std_logic_vector(shift_right(unsigned(p_reg),4)); 
                     accum <=res_add_sg4;
             end if;
-            if en_r2 = '1' then
+            if en_image = '1' then
                 if accum > 0 then
-                    relu <= accum;
+                    relu(15 downto 0) <= accum;
+                    accum <= "0000000000000000";
                 else 
-                    relu <= "0000000000000000";              
-                end if;             
+                    relu(15 downto 0) <= "0000000000000000";              
+                end if;     
+                relu <= relu(15 downto 0) & relu (511 downto 16);        
             end if;
     end if;       
    end process;
 res <= std_logic_vector(relu);
+
+--Para a parte 2 do projeto o funcionamento vai ser semelhante ao primeiro 
+--Devera ser usado um contador de 3 bits, que incrementa com w2, ao chegar no valor
+--`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final.
 end Behavioral;

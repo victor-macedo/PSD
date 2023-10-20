@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Circuit is
   Port ( 
   clk, rst_control : in std_logic;
-  res: out std_logic_vector (15 downto 0);
+  res: out std_logic_vector (511 downto 0);
   p : in std_logic_vector (31 downto 0);
   w1 : in std_logic_vector (15 downto 0));
 end Circuit;
@@ -27,7 +27,7 @@ Port (
     clk, rst_dpath : in std_logic;
     p : in std_logic_vector (31 downto 0);
     w1 : in std_logic_vector (15 downto 0);
-    res: out std_logic_vector (15 downto 0)
+    res: out std_logic_vector (511 downto 0)
     );
          
 end component;
