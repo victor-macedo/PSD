@@ -16,7 +16,7 @@ architecture Behavioral of ControlUnit is
 type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
     
     signal currstate, nextstate: fsm_states;
-    signal counter_31: unsigned (4 downto 0);
+    signal counter_8: unsigned (2 downto 0);
     begin
         
         state_reg: process (clk, rst_control)
@@ -38,13 +38,10 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
             nextstate <= currstate ; 
             case currstate is
                 when s_initial =>
-                     if counter_31(2 downto 0)="111" then 
-                           en_w <= '1';
-                           if counter_31(4 downto 0) = "11111" then
+                     if counter_8(2 downto 0)="111" then 
                             en_p <= '1';
-                            end if;
+                            counter_8(2 downto 0)<="000";
                      else
-                         en_w <= '0';
                          en_p <= '0';
                      end if;     
                      nextstate <= CYCLE1;
@@ -54,6 +51,7 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
                 when CYCLE1 =>
                      nextstate <= CYCLE2;
                      enable <= "0001"; --MSB = Reg2, LSB = Reg1, AND = Reg3
+                     en_w <= '0';
                 when CYCLE2 =>
                      nextstate <= CYCLE3;
                      enable <= "0010";
@@ -62,9 +60,8 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
                      enable <= "0100";
                 when s_end =>
                      enable <= "0000";
-                     counter_31 <= counter_31 + 1;
-                   
-                    
+                     en_w <= '1';
+                     counter_8 <= counter_8 + 1;       
              end case;
         end process; 
 

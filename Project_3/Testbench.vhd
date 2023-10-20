@@ -9,8 +9,8 @@ architecture Behavioral of testbench is
     component circuit
        Port ( 
       clk, rst_control : in std_logic;
-      p : in std_logic_vector (1023 downto 0);
-      w1 :  in std_logic_vector (5119 downto 0);
+      p : in std_logic_vector (31 downto 0);
+      w1 :  in std_logic_vector (15 downto 0);
       res: out std_logic_vector (15 downto 0)
       );
     end component;
@@ -19,8 +19,8 @@ architecture Behavioral of testbench is
     -- Inputs
     signal clk : std_logic := '0';
     signal rst_control : std_logic := '0';
-    signal p:  std_logic_vector (1023 downto 0) := (others => '0'); -- Tamanho de 0 a +256
-    signal w1:  std_logic_vector (5119 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    signal p:  std_logic_vector (31 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    signal w1:  std_logic_vector (15 downto 0) := (others => '0'); -- Tamanho de 0 a +256
     -- Outputs
     signal res : std_logic_vector(15 downto 0) := (others => '0');
    
@@ -52,12 +52,12 @@ architecture Behavioral of testbench is
      '1' after 385 ns,
      '0' after 405 ns;
      
-     p <= X"67" after 40 ns,
-      X"12" after 200 ns,
-      X"C3" after 360 ns;
-     w1 <= X"67" after 40 ns,
-     X"37" after 200 ns,
-    X"E4" after 360 ns;
+     p <= X"67676767" after 40 ns,
+      X"12121212" after 200 ns,
+      X"C3C3C3C3" after 360 ns;
+     w1 <= X"6767" after 40 ns,
+     X"3737" after 200 ns,
+    X"E4E4" after 360 ns;
      
      wait;
     end process; 
