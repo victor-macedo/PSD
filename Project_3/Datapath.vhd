@@ -8,7 +8,7 @@ entity Datapath is
     clk, rst_dpath : in std_logic;
     p : in std_logic_vector (31 downto 0);
     w1 : in std_logic_vector (15 downto 0); --REvisar formato
-    w2 : in std_logic_vector (31 downto 0);
+    w2 : in std_logic_vector (31 downto 0); 
     res: out std_logic_vector (511 downto 0)
     );
 end Datapath;
@@ -26,11 +26,11 @@ signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 
 
 --Signals da parte 2
 signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(15 downto 0);
-signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(3 downto 0);
-signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (19 downto 0);
-signal res2_add_sg1, res2_add_sg2 : signed(20 downto 0);
-signal res2_add_sg3 : signed(21 downto 0);
-signal res2_add_sg4 : signed (32 downto 0); --Conferir tamanho do vetor
+signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0);
+signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits
+signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24
+signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25
+signal res2_add_sg4 : signed (32 downto 0); --ALERTA! ESSE N FAZ SENTIDO! Conferir tamanho do vetor
 signal res2_add4 : std_logic_vector (32 downto 0); 
 signal accum2: signed(32 downto 0):=( others => '0');
 
@@ -66,7 +66,7 @@ begin
         
     
 -- adder1
-    res1_add_sg1 <= '0' & (mul1_1 + mul1_2); --Havia um 0 suspeito
+    res1_add_sg1 <= '0' & (mul1_1 + mul1_2); 
     
 -- adder2
     res1_add_sg2 <= '0' & (mul1_3 + mul1_4);
@@ -106,22 +106,22 @@ res <= std_logic_vector(relu);
 
 -- Multiplier  1
     hidden_sg1 <= signed(relu(15 downto 0));
-    w2_sg1 <= signed(w2(3 downto 0)); 
+    w2_sg1 <= signed(w2(7 downto 0)); 
     mul2_sg1 <= hidden_sg1 * w2_sg1;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 2 
     hidden_sg2 <= signed(relu(31 downto 16));
-    w2_sg2 <= signed(w2(7 downto 4)); 
+    w2_sg2 <= signed(w2(15 downto 8)); 
     mul2_sg2 <= hidden_sg2 * w2_sg2;           --Se houver erro concatenar 0 no w
     
     -- Multiplier  3
     hidden_sg3 <= signed(relu(47 downto 32));
-    w2_sg3 <= signed(w2(11 downto 8)); 
+    w2_sg3 <= signed(w2(23 downto 16)); 
     mul2_sg3 <= hidden_sg3 * w2_sg3;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 4 
     hidden_sg4 <= signed(relu(63 downto 48));
-    w2_sg4 <= signed(w2(15 downto 12)); 
+    w2_sg4 <= signed(w2(31 downto 24)); 
     mul2_sg4 <= hidden_sg4 * w2_sg4;           --Se houver erro concatenar 0 no w
     
 -- adder1

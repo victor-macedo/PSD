@@ -11,6 +11,7 @@ architecture Behavioral of testbench is
       clk, rst_control : in std_logic;
       p : in std_logic_vector (31 downto 0);
       w1 :  in std_logic_vector (15 downto 0);
+      w2 :  in std_logic_vector (31 downto 0);
       res: out std_logic_vector (511 downto 0)
       );
     end component;
@@ -22,6 +23,7 @@ architecture Behavioral of testbench is
     signal p:  std_logic_vector (31 downto 0) := (others => '0'); -- Tamanho de 0 a +256
     signal w1:  std_logic_vector (15 downto 0) := (others => '0'); -- Tamanho de 0 a +256
     -- Outputs
+   signal w2 : std_logic_vector (31 downto 0);
     signal res : std_logic_vector(511 downto 0) := (others => '0');
    
     -- Clock period definitions

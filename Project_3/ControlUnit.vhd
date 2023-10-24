@@ -17,6 +17,8 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
     
     signal currstate, nextstate: fsm_states;
     signal counter_image: unsigned (7 downto 0);
+    signal counter_neurons: unsigned(4 downto 0); --Conta até 32 pra saber quando todos os neurons DO MEIO foram calculados
+    signal counter_final: unsigned(4 downto 0); --Conta até 32 pra saber todos os neurons FINAIS foram calculados
     begin
         
         state_reg: process (clk, rst_control)
@@ -44,6 +46,7 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
                             en_pixel <= '1';
                                 if counter_image (7 downto 0) = "11111111" then
                                     en_image <= '1';
+                                    counter_neurons <= counter_neurons + 1; --Vai mostrar que 1 neuronio foi calculado
                                 end if;                                             
                             end if;
                      else
@@ -51,10 +54,12 @@ type fsm_states is (s_initial, s_end, CYCLE1, CYCLE2, CYCLE3);
                          en_pixel <= '0';
                          en_image <= '0';
                      end if;     
+                     
+                     if counter_neurons(4 downto 0) = "11111" then
+                        --Não sei se tá certo, mas se todos os neurons tao prontos, podemos calcular a última camada
+                     end if;
                      nextstate <= CYCLE1;
                      enable <= "0000";
-                                 
-                     
                 when CYCLE1 =>
                      nextstate <= CYCLE2;
                      enable <= "0001"; --MSB = Reg2, LSB = Reg1, AND = Reg3

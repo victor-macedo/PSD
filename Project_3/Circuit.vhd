@@ -7,7 +7,8 @@ entity Circuit is
   clk, rst_control : in std_logic;
   res: out std_logic_vector (511 downto 0);
   p : in std_logic_vector (31 downto 0);
-  w1 : in std_logic_vector (15 downto 0));
+  w1 : in std_logic_vector (15 downto 0);
+  w2 : in std_logic_vector (31 downto 0));
 end Circuit;
 
 architecture Behavioral of Circuit is
@@ -27,6 +28,7 @@ Port (
     clk, rst_dpath : in std_logic;
     p : in std_logic_vector (31 downto 0);
     w1 : in std_logic_vector (15 downto 0);
+    w2 : in std_logic_vector (31 downto 0);
     res: out std_logic_vector (511 downto 0)
     );
          
@@ -42,7 +44,7 @@ begin
     inst_datapath: Datapath port map (
      enable(1) => en_r2, enable(0) => en_r1, 
      enable(2) => en_r3, enable(3) => en_r4, 
-     p => p, w1=> w1,
+     p => p, w1=> w1, w2=> w2,
      rst_dpath => rst_control,
      clk => clk,
      res => res
