@@ -76,7 +76,7 @@ instance_images : images_mem
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin(11 downto 0),
+    addra => addrin(11 downto 0), --counter image(7 downto 4)
     dina => (others => '0'),
     douta => im_out,
     clkb => clk,
@@ -90,7 +90,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin,
+    addra => addrin, --counter image
     dina => (others => '0'),
     douta => w1_out,
     clkb => clk,
@@ -104,7 +104,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin(6 downto 0),
+    addra => addrin(6 downto 0), --counter_final
     dina => (others => '0'),
     douta => w2_out,
     clkb => clk,
