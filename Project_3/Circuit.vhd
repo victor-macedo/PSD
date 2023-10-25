@@ -3,51 +3,60 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity Circuit is
-  Port ( 
-  clk, rst_control : in std_logic;
-  res: out std_logic_vector (511 downto 0);
-  p : in std_logic_vector (31 downto 0);
-  w1 : in std_logic_vector (15 downto 0);
-  w2 : in std_logic_vector (31 downto 0));
+  port (clk, rst, selector: in std_logic;
+    p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p2_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p3_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    p4_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+    w1_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+    res: out std_logic_vector (18 downto 0);
+    feito: out std_logic);
 end Circuit;
 
 architecture Behavioral of Circuit is
-
-component ControlUnit
-Port (
-        clk, rst_control : in std_logic;
-        enable:  out std_logic_vector(3 downto 0);
-        rst_dpath : out std_logic
- );
+    component ControlUnit
+         port( clk, rst : in std_logic;
+      reset: out std_logic;
+      enable:  out std_logic_vector(1 downto 0);
+      selector, done: out std_logic);
+     end component;
     
-end component;
-
-component Datapath
-Port ( 
-    enable : in std_logic_vector (3 downto 0); --Conferir n? de registros necess?rios
-    clk, rst_dpath : in std_logic;
-    p : in std_logic_vector (31 downto 0);
-    w1 : in std_logic_vector (15 downto 0);
-    w2 : in std_logic_vector (31 downto 0);
-    res: out std_logic_vector (511 downto 0)
-    );
+    component datapath
+    port(clk, reset, done, selector: in std_logic;
+        enable: in std_logic_vector(1 downto 0);
+        p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+        p2_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+        p3_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+        p4_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
+        w1_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+        w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+        w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+        w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
+        res: out std_logic_vector (18 downto 0);
+        feito: out std_logic);
          
-end component;
-    signal en_r2, en_r1, en_r3, en_r4: std_logic;
+     end component;
+     signal en_reg2, en_reg1, done : std_logic;
      
 begin
     inst_control: ControlUnit port map(
-     clk => clk, rst_control => rst_control, 
-     enable(1) => en_r2, enable(0) => en_r1, 
-     enable(2) => en_r3, enable(3) => en_r4);
+     clk => clk, rst => rst, 
+     enable(1) => en_reg2, enable(0) => en_reg1, 
+     done => done);
      
-    inst_datapath: Datapath port map (
-     enable(1) => en_r2, enable(0) => en_r1, 
-     enable(2) => en_r3, enable(3) => en_r4, 
-     p => p, w1=> w1, w2=> w2,
-     rst_dpath => rst_control,
+    inst_datapath: datapath port map (
+     p1_reg => p1_reg, p2_reg => p2_reg,
+     p3_reg => p3_reg, p4_reg => p4_reg,
+     w1_reg => w1_reg, w2_reg => w2_reg,
+     w3_reg => w3_reg, w4_reg => w4_reg, 
+     enable(1) => en_reg2, enable(0) => en_reg1, 
+     reset => rst,
+     selector => selector,
      clk => clk,
-     res => res
-     );
+     res => res, done => done,
+     feito => feito );
 
 end Behavioral;
