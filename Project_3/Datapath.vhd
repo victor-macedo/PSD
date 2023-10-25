@@ -16,23 +16,23 @@ end Datapath;
 
 architecture Behavioral of Datapath is
 --Signals da parte 1
-signal p_reg : std_logic_vector (31 downto 0):= (p);
-signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits
-signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0);
-signal res1_add_sg3 : signed(5 downto 0);
-signal res1_add_sg4 : signed(15 downto 0);
-signal accum1: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits
+signal p_reg : std_logic_vector (31 downto 0):= (p);    
+signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
+signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
+signal res1_add_sg3 : signed(5 downto 0);--Q0.6
+signal res1_add_sg4 : signed(15 downto 0);--Q10.6
+signal accum1: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits --Q10.6
 signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
 
 --Signals da parte 2
 signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(15 downto 0);
-signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0);
-signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits
-signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24
-signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25
-signal res2_add_sg4 : signed (35 downto 0); --Conferir tamanho do vetor
-signal res2_add4 : std_logic_vector (35 downto 0); 
-signal accum2,max: signed(35 downto 0):=( others => '0');
+signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0); --Q0.8
+signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
+signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24 --Q11.14
+signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25 --Q12.14
+signal res2_add_sg4 : signed (35 downto 0); --Conferir tamanho do vetor --Q22.14
+signal res2_add4 : std_logic_vector (35 downto 0); --Q22.14
+signal accum2,max: signed(35 downto 0):=( others => '0'); --Q22.14
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 
 
