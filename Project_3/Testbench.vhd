@@ -7,34 +7,24 @@ end testbench;
 architecture Behavioral of testbench is
 
     component circuit
-        port (clk, rst, selector : in std_logic;
-    p1_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
-    p2_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
-    p3_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
-    p4_reg : in std_logic_vector (7 downto 0); -- Tamanho de 0 a +256
-    w1_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-    w2_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-    w3_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-    w4_reg: in std_logic_vector (7 downto 0); -- Tamanho de -128 a 127
-    res: out std_logic_vector (18 downto 0);
-    feito: out std_logic);
+       Port ( 
+          clk, rst_control : in std_logic;
+          res: out std_logic_vector (3 downto 0);
+          p : in std_logic_vector (31 downto 0);
+          w1 : in std_logic_vector (15 downto 0);
+          w2 : in std_logic_vector (31 downto 0)
+      );
     end component;
 
 
     -- Inputs
     signal clk : std_logic := '0';
-    signal rst : std_logic := '0';
-    signal selector : std_logic := '1';
-    signal p1_reg :  std_logic_vector (7 downto 0) := (others => '0'); -- Tamanho de 0 a +256
-    signal p2_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
-    signal p3_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
-    signal p4_reg : std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de 0 a +256
-    signal w1_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
-    signal w2_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
-    signal w3_reg: std_logic_vector (7 downto 0) := (others => '0');  -- Tamanho de -128 a 127
-    signal w4_reg: std_logic_vector (7 downto 0) := (others => '0'); -- Tamanho de -128 a 127
+    signal rst_control : std_logic := '0';
+    signal p:  std_logic_vector (31 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    signal w1:  std_logic_vector (15 downto 0) := (others => '0'); -- Tamanho de 0 a +256
     -- Outputs
-    signal res : std_logic_vector(18 downto 0) := (others => '0');
+   signal w2 : std_logic_vector (31 downto 0);
+    signal res : std_logic_vector(3 downto 0) := (others => '0');
    
     -- Clock period definitions
     constant clk_period : time := 10 ns;
@@ -42,12 +32,10 @@ architecture Behavioral of testbench is
     begin
      uut: circuit PORT MAP (
      clk => clk,
-     rst => rst,
-     selector => selector,
-     p1_reg => p1_reg, p2_reg => p2_reg,
-     p3_reg => p3_reg, p4_reg => p4_reg,
-     w1_reg => w1_reg, w2_reg => w2_reg,
-     w3_reg => w3_reg, w4_reg => w4_reg, 
+     rst_control => rst_control,
+     p => p,
+     w1 => w1,
+     w2 => w2,
      res => res
      );
     -- Clock definition
@@ -60,36 +48,22 @@ architecture Behavioral of testbench is
     wait for clk_period*10;
     
     
-    rst <= '1' after 20 ns,
+    rst_control <= '1' after 20 ns,
      '0' after 40 ns,
      '1' after 220 ns,
      '0' after 240 ns,
      '1' after 385 ns,
      '0' after 405 ns;
-     p1_reg <= X"67" after 40 ns,
-      X"12" after 200 ns,
-      X"C3" after 360 ns;
-     p2_reg <=  X"67" after 40 ns,
-        X"12" after 200 ns,
-      X"C3" after 360 ns;
-     p3_reg <= X"67" after 40 ns,
-     X"12" after 200 ns,
-   X"C3" after 360 ns;
-     p4_reg <= X"67" after 40 ns,
-     X"12" after 200 ns,
-     X"C3" after 360 ns;
-     w1_reg <= X"67" after 40 ns,
-      X"12" after 200 ns,
-      X"C3" after 360 ns;
-     w2_reg <= X"67" after 40 ns,
-     X"12" after 200 ns,
-     X"C3" after 360 ns;
-     w3_reg <= X"67" after 40 ns,
-     X"12" after 200 ns,
-      X"C3" after 360 ns;
-     w4_reg <= X"67" after 40 ns,
-     X"12" after 200 ns,
-    X"C3" after 360 ns;
+     
+     p <= X"67676767" after 40 ns,
+      X"12121212" after 200 ns,
+      X"C3C3C3C3" after 360 ns;
+     w1 <= X"6767" after 40 ns,
+     X"3737" after 200 ns,
+    X"E4E4" after 360 ns;
+    w2 <= X"13131371" after 40 ns,
+      X"16161616" after 200 ns,
+      X"A3A3A3A3" after 360 ns;
      
      wait;
     end process; 
