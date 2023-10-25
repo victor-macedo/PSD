@@ -25,12 +25,10 @@ end component;
 
 component Datapath
 Port ( 
-    en_weight, en_pixel, en_image, en_accum2, en_max, done: in std_logic;
     clk, rst_dpath : in std_logic;
     p : in std_logic_vector (31 downto 0);
     w1 : in std_logic_vector (15 downto 0);
     w2 : in std_logic_vector (31 downto 0);
-    contagem : in std_logic_vector(3 downto 0);
     res: out std_logic_vector (3 downto 0)
     );
          
@@ -46,9 +44,6 @@ begin
      contagem => contagem);
      
     inst_datapath: Datapath port map (
-     en_weight => en_weight, en_pixel => en_pixel,
-     en_image => en_image, en_accum2 => en_accum2,
-     en_max => en_max, done => done, 
      p => p, w1=> w1, w2=> w2,
      rst_dpath => rst_control,
      clk => clk,

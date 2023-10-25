@@ -4,12 +4,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Datapath is
   Port ( 
-    en_weight, en_pixel, en_image, en_accum2, en_max, done: in std_logic;
     clk, rst_dpath : in std_logic;
-    contagem: in std_logic_vector(3 downto 0);
     p : in std_logic_vector (31 downto 0);
-    w1 : in std_logic_vector (15 downto 0); --REvisar formato
-    w2 : in std_logic_vector (31 downto 0); 
+    w1_out : in std_logic_vector (15 downto 0); --REvisar formato
+    w2_out : in std_logic_vector (31 downto 0); 
     res : out std_logic_vector(3 downto 0)
     );
 end Datapath;
@@ -35,32 +33,27 @@ signal res2_add4 : std_logic_vector (35 downto 0); --Q22.14
 signal accum2,max: signed(35 downto 0):=( others => '0'); --Q22.14
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 
-
+signal counter_image: unsigned (7 downto 0):=( others => '0');
+signal counter_neurons: unsigned(4 downto 0):=( others => '0'); --Conta até 32 pra saber quando todos os neurons DO MEIO foram calculados
+signal counter_final: unsigned(6 downto 0):=( others => '0'); --Conta até 32 pra saber todos os neurons FINAIS foram calculados
+signal w1 : std_logic_vector (15 downto 0);
+signal w2 : std_logic_vector (31 downto 0); 
 
 begin
-
+    --Falta chamar o endereco de memoria
+w1 <= w1_out;
+w2 <= w2_out;
 --Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
-    process (clk)
-        begin
-            case p(0) is
-                 when '0' => mul1_1 <= "0000";
-                 when others =>  mul1_1 <= signed(w1(3 downto 0));
-            end case;   
-            case p(1) is
-                 when '0' => mul1_2 <= "0000";
-                 when others =>  mul1_2 <= signed(w1(7 downto 4));
-            end case;
-            case p(2) is
-                 when '0' => mul1_3 <= "0000";
-                 when others =>  mul1_3 <= signed(w1(11 downto 8));
-            end case;
-            case p(3) is
-                 when '0' => mul1_4 <= "0000";
-                 when others =>  mul1_4 <= signed(w1(15 downto 12));
-            end case;
-        end process;
-        
-    
+
+    mul1_1 <= "0000" when p(0) = '0' else
+            signed(w1(3 downto 0));
+    mul1_2 <= "0000" when p(1) = '0' else
+    signed(w1(7 downto 4));
+    mul1_3 <= "0000" when p(2) = '0' else
+    signed(w1(11 downto 8));
+    mul1_4 <= "0000" when p(3) = '0' else
+    signed(w1(15 downto 12));
+       
 -- adder1
     res1_add_sg1 <= '0' & (mul1_1 + mul1_2); 
     
@@ -73,31 +66,52 @@ begin
     res1_add_sg4 <= (res1_add_sg3 + accum1); 
     
 -- reset
-process (clk)
+process (clk)--process do reset
     begin
         if clk'event and clk='1' then
             if rst_dpath ='1' then
                 accum1 <= "0000000000000000";
+                accum2 <= "000000000000000000000000000000000000";
             end if;  
-            if en_weight = '1' then --Foi considerado que en_p sera ativado apenas ao final de todos os w
-                    p_reg <= std_logic_vector(shift_right(unsigned(p_reg),4)); 
-                    accum1 <=res1_add_sg4;
-            end if;
-            if en_pixel = '1' then
-                p_reg <= p; --Atualiza os valores de p no registro
-            end if;
-            if en_image = '1' then
-                if accum1 > 0 then
-                    relu(15 downto 0) <= accum1;
-                    accum1 <= "0000000000000000";
-                else 
-                    relu(15 downto 0) <= "0000000000000000";              
-                end if;     
-                relu <= relu(15 downto 0) & relu (511 downto 16);        
-            end if;
+            p_reg <= std_logic_vector(shift_right(unsigned(p_reg),4)); 
+            accum1 <=res1_add_sg4;
+       end if; 
+end process;     
+  
+process (clk)
+    begin
+        if clk'event and clk='1' then 
+            if counter_image(2 downto 0)="111" then 
+                --avança para a próxima linha da imagem
+               if counter_image (7 downto 0) = "11111111" then
+                   if accum1 > 0 then
+                        relu(15 downto 0) <= accum1;
+                        accum1 <= "0000000000000000";
+                   else 
+                        relu(15 downto 0) <= "0000000000000000";              
+                   end if;     
+                   relu <= relu(15 downto 0) & relu (511 downto 16);    
+                -- Deve reiniciar o enderecoda imagem     en_image <= '1';    --A imagem foi finalizada
+               end if;                                           
+            end if;     
     end if;       
    end process;
+   
+ process (clk)--juntar counter image e counter neuron em unico só, e ent colocar enable a partir da control unit
+    begin
+        if clk'event and clk='1' then
+            counter_image <= counter_image + 1;
+      end if;   
+end process;
 
+ process (clk)
+    begin
+        if clk'event and clk='1' then
+           if counter_image (7 downto 0) = "11111111" then
+                counter_neurons <= counter_neurons + 1; --Vai mostrar que 1 neuronio foi calculado   
+           end if;
+      end if;   
+end process;
 --Para a parte 2 do projeto o funcionamento vai ser semelhante ao primeiro 
 --Devera ser usado um contador de 3 bits, que incrementa com w2, ao chegar no valorz
 --`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
@@ -138,23 +152,28 @@ process (clk)
 process (clk)
     begin
         if clk'event and clk='1' then
-            if rst_dpath ='1' then
-                accum2 <= "000000000000000000000000000000000000";
-            elsif en_accum2 = '1' then
+           if counter_neurons = "11111" then    
                 relu <= shift_right(relu,4);
                 accum2 <= res2_add_sg4;
-            end if;  
-        if en_image = '1' then
-            if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
-                max <= accum2;
-                best <= contagem;--Salva o valor do contador, o qual representa o numero de saida       
-            end if;            
+           end if;  
+           if counter_final(2 downto 0) = "111" then
+               if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
+                    max <= accum2;
+                    best <= std_logic_vector(counter_final(6 downto 3)-1);--Salva o valor do contador, o qual representa o numero de saida       
+               end if;   
+               if counter_final(6 downto 3)="1010" then --Quando calcula todos os neuronios mostra a saida final
+                    res <= best;  
+               end if;       
+           end if;  
         end if;
-        if done = '1' then
-            res <= best;
-        end if;
-    end if;       
    end process;
    
-  --Falta armazenar os accum2 de forma semelhante aos relu para então fazer uma função de MAX e selecionar o numero correspondete.
+process (clk)
+begin
+    if clk'event and clk='1' then
+       if counter_neurons = "11111" then 
+            counter_final <= counter_final + 1; 
+       end if;
+    end if;
+end process;
 end Behavioral;
