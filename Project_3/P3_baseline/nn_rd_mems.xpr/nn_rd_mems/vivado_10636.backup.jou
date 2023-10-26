@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Oct 25 17:01:20 2023
+# Process ID: 10636
+# Current directory: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20640 C:\Users\guivi\OneDrive - Universidade de Lisboa\Documentos\Faculdade\GitHub\PSD\Project_3\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.xpr
+# Log file: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/vivado.log
+# Journal file: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems\vivado.jou
+# Running On: Victor_Yoga, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 12, Host memory: 7879 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/project_3/project_3.xpr}
+update_compile_order -fileset sources_1

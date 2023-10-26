@@ -1,0 +1,79 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Oct 26 10:35:07 2023
+| Host         : Victor_Yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weights2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of weights2 (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Oct 26 10:35:05 2023
+| Host         : Victor_Yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'weights1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of weights1 (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Oct 26 10:35:03 2023
+| Host         : Victor_Yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'images_mem'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of images_mem (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Oct 26 10:34:51 2023
+| Host         : Victor_Yoga running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Q08toBCD'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Q08toBCD (xilinx.com:ip:dist_mem_gen:8.0) from (Rev. 13) to (Rev. 14)
+
