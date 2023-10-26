@@ -10,9 +10,7 @@ architecture Behavioral of testbench is
        Port ( 
           clk, rst_control : in std_logic;
           res: out std_logic_vector (3 downto 0);
-          p : in std_logic_vector (31 downto 0);
-          w1 : in std_logic_vector (15 downto 0);
-          w2 : in std_logic_vector (31 downto 0)
+          p : in std_logic_vector (31 downto 0)
       );
     end component;
 
@@ -34,8 +32,6 @@ architecture Behavioral of testbench is
      clk => clk,
      rst_control => rst_control,
      p => p,
-     w1 => w1,
-     w2 => w2,
      res => res
      );
     -- Clock definition

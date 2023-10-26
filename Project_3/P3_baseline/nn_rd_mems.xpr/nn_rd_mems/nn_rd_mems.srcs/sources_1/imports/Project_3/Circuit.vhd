@@ -6,49 +6,44 @@ entity Circuit is
   Port ( 
   clk, rst_control : in std_logic;
   res: out std_logic_vector (3 downto 0);
-  p : in std_logic_vector (31 downto 0);
-  w1 : in std_logic_vector (15 downto 0);
-  w2 : in std_logic_vector (31 downto 0));
+  p : in std_logic_vector (31 downto 0)
+  );
 end Circuit;
 
 architecture Behavioral of Circuit is
 
 component ControlUnit
 Port (
-        clk, rst_control : in std_logic;
-        en_weight, en_pixel, en_image, en_accum2, en_max, done: out std_logic;
-        rst_dpath : out std_logic;
-        contagem : out std_logic_vector(3 downto 0)
+        clk,rst_control,done1 : in std_logic;
+        rst_dpath,en_count1,en_count2 : out std_logic
  );
     
 end component;
 
 component Datapath
 Port ( 
-    clk, rst_dpath : in std_logic;
+    clk, rst_dpath, en_count1,en_count2 : in std_logic;
     p : in std_logic_vector (31 downto 0);
-    w1 : in std_logic_vector (15 downto 0);
-    w2 : in std_logic_vector (31 downto 0);
-    res: out std_logic_vector (3 downto 0)
+    res: out std_logic_vector (3 downto 0);
+    done1: out std_logic
     );
          
 end component;
-     signal en_weight, en_pixel, en_image, en_accum2, en_max, done:std_logic;
-     signal contagem : std_logic_vector(3 downto 0);
+     signal done1,en_count1,en_count2:std_logic;
 begin
     inst_control: ControlUnit port map(
-     clk => clk, rst_control => rst_control, 
-     en_weight => en_weight, en_pixel => en_pixel,
-     en_image => en_image, en_accum2 => en_accum2,
-     en_max => en_max, done => done,
-     contagem => contagem);
+     clk => clk, rst_control => rst_control,
+     done1 => done1
+        );
      
     inst_datapath: Datapath port map (
-     p => p, w1=> w1, w2=> w2,
+     p => p,
      rst_dpath => rst_control,
      clk => clk,
      res => res,
-     contagem => contagem
+     done1 => done1,
+     en_count1 => en_count1, 
+     en_count2 => en_count2
      );
 
 end Behavioral;

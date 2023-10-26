@@ -4,14 +4,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity ControlUnit is
     Port (
-        clk, rst_control : in std_logic;
-        rst_dpath : out std_logic
+        clk, rst_control,done1 : in std_logic;
+        rst_dpath,en_count1,en_count2 : out std_logic
     );
 end ControlUnit;
 
 architecture Behavioral of ControlUnit is
 
-type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2,CYCLE3);
+type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2);
     
     signal currstate, nextstate: fsm_states;
     begin
@@ -37,15 +37,18 @@ type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2,CYCLE3);
                 when s_initial =>
                     nextstate <= CYCLE1;
                 when CYCLE1 =>
-                    --algum enable para contagem do ciclo 1
-                     nextstate <= CYCLE2;           
+                    en_count1 <= '1';
+                    if done1 ='1' then
+                        nextstate <= CYCLE2;  
+                    else 
+                        nextstate <= CYCLE1;
+                    end if;         
                 when CYCLE2 =>
-                --algum enable para contagem do ciclo 2
-                     nextstate <= CYCLE3;
-                when CYCLE3 =>
-                     nextstate <= s_end;
+                        en_count1 <= '0';
+                        en_count2 <= '1';
+                        nextstate <= CYCLE2;  
                 when s_end =>
-                     nextstate <= s_initial;
+                     
         end case;              
         end process; 
 

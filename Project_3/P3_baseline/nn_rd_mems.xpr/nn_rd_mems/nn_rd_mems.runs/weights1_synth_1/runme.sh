@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights1_synth_1'
+HD_PWD='C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

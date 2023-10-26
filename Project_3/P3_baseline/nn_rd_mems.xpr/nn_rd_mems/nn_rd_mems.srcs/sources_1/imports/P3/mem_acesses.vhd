@@ -63,20 +63,36 @@ COMPONENT weights2
     doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) 
   );
 END COMPONENT;
-
+component Datapath
+Port ( 
+    p,w2_out : in std_logic_vector (31 downto 0);
+    w1_out : in std_logic_vector (15 downto 0);
+    count1: out std_logic_vector (12 downto 0);
+    count2: out std_logic_vector(6 downto 0)
+    );
+         
+end component;
   signal zeros : std_logic_vector(15 downto 0);
   signal im_out, w2_out : std_logic_vector(31 downto 0);
   signal w1_out : std_logic_vector(15 downto 0);
   signal addr_w1 : std_logic_vector(12 downto 0);
+  signal count1: std_logic_vector (12 downto 0);
+  signal count2: std_logic_vector(6 downto 0);
 
 begin
 zeros <= (others => '0');
 
+inst_datapath: Datapath port map (
+     p => im_out,
+    w1_out => w1_out , w2_out => w2_out,
+    count1 => count1, count2 =>count2
+     );
+     
 instance_images : images_mem
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin(11 downto 0), --counter image(7 downto 4)
+    addra => count1(12 downto 1),
     dina => (others => '0'),
     douta => im_out,
     clkb => clk,
@@ -90,7 +106,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin, --counter image
+    addra => count1,
     dina => (others => '0'),
     douta => w1_out,
     clkb => clk,
@@ -104,7 +120,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin(6 downto 0), --counter_final
+    addra => count2,
     dina => (others => '0'),
     douta => w2_out,
     clkb => clk,

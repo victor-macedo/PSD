@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd" \
+"../../../../nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd" \
+
+# Do not sort compile order
+nosort

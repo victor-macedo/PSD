@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Oct 26 10:16:57 2023
-# Process ID: 19496
-# Current directory: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2356 C:\Users\guivi\OneDrive - Universidade de Lisboa\Documentos\Faculdade\GitHub\PSD\Project_3\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.xpr
-# Log file: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/vivado.log
-# Journal file: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems\vivado.jou
+# Start of session at: Thu Oct 26 10:32:06 2023
+# Process ID: 5604
+# Current directory: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18004 C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.xpr
+# Log file: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/vivado.log
+# Journal file: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems\vivado.jou
 # Running On: Victor_Yoga, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 12, Host memory: 7879 MB
 #-----------------------------------------------------------
 start_gui
@@ -92,31 +92,29 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-open_project {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.xpr}
-INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems'
+open_project C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.xpr
 INFO: [Project 1-313] Project file moved from 'C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_' since last save.
 Scanning sources...
 Finished scanning sources
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1' of run 'synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1' of run 'images_mem_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1' of run 'images_mem_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1' of run 'weights1_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1' of run 'weights1_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1' of run 'weights2_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1' of run 'weights2_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1' of run 'Q08toBCD_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1' of run 'Q08toBCD_synth_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1' of run 'images_mem_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1' of run 'images_mem_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1' of run 'weights1_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1' of run 'weights1_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1' of run 'weights2_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1' of run 'weights2_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1' of run 'Q08toBCD_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1'.
-INFO: [Project 1-1877] Auto incremental dir location 'C:/Users/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1' of run 'Q08toBCD_impl_1' is not writable, setting it to default location 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1' of run 'synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1' of run 'images_mem_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1' of run 'images_mem_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1' of run 'weights1_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1' of run 'weights1_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1' of run 'weights2_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1' of run 'weights2_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1' of run 'Q08toBCD_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1' of run 'Q08toBCD_synth_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_synth_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1' of run 'impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1' of run 'images_mem_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1' of run 'images_mem_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/images_mem_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1' of run 'weights1_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1' of run 'weights1_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights1_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1' of run 'weights2_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1' of run 'weights2_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/weights2_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1' of run 'Q08toBCD_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1'.
+INFO: [Project 1-1877] Auto incremental dir location 'C:/../../../../PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1' of run 'Q08toBCD_impl_1' is not writable, setting it to default location 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/Q08toBCD_impl_1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
@@ -129,68 +127,992 @@ WARNING: [IP_Flow 19-2162] IP 'weights2' is locked:
 WARNING: [IP_Flow 19-2162] IP 'Q08toBCD' is locked:
 * IP definition 'Distributed Memory Generator (8.0)' for IP 'Q08toBCD' (customized with software release 2023.1) has a different revision in the IP Catalog.
 INFO: [Project 1-230] Project 'nn_rd_mems.xpr' upgraded for this version of Vivado.
-open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1267.137 ; gain = 75.004
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1275.152 ; gain = 34.391
 update_compile_order -fileset sources_1
 report_ip_status -name ip_status 
-import_files -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/ControlUnit.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/Datapath.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/Circuit.vhd}}
+upgrade_ip -srcset Q08toBCD [get_ips  {Q08toBCD images_mem weights1 weights2}] -log ip_upgrade.log
+Upgrading 'Q08toBCD'
+INFO: [Project 1-386] Moving file 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci' from fileset 'Q08toBCD' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded Q08toBCD (Distributed Memory Generator 8.0) from revision 13 to revision 14
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'Q08toBCD'...
+Upgrading 'images_mem'
+INFO: [Project 1-386] Moving file 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci' from fileset 'images_mem' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded images_mem (Block Memory Generator 8.4) from revision 6 to revision 7
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'images_mem'...
+Upgrading 'weights1'
+INFO: [Project 1-386] Moving file 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci' from fileset 'weights1' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded weights1 (Block Memory Generator 8.4) from revision 6 to revision 7
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'weights1'...
+Upgrading 'weights2'
+INFO: [Project 1-386] Moving file 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci' from fileset 'weights2' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3422] Upgraded weights2 (Block Memory Generator 8.4) from revision 6 to revision 7
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'weights2'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1341.965 ; gain = 55.141
+export_ip_user_files -of_objects [get_ips {Q08toBCD images_mem weights1 weights2}] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+launch_runs synth_1 -jobs 6
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'weights2'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights2
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'weights1'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights1
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'images_mem'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: images_mem
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Q08toBCD'...
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: Q08toBCD
+[Thu Oct 26 10:36:37 2023] Launched images_mem_synth_1, weights1_synth_1, Q08toBCD_synth_1, weights2_synth_1...
+Run output will be captured here:
+images_mem_synth_1: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/images_mem_synth_1/runme.log
+weights1_synth_1: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights1_synth_1/runme.log
+Q08toBCD_synth_1: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/Q08toBCD_synth_1/runme.log
+weights2_synth_1: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights2_synth_1/runme.log
+[Thu Oct 26 10:36:37 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+import_files -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd}}
 update_compile_order -fileset sources_1
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-import_files -fileset sim_1 -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/Testbench.vhd}}
+import_files -fileset sim_1 -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/Project_3/Testbench.vhd}}
 update_compile_order -fileset sim_1
-import_files -force -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/ControlUnit.vhd}}
-update_compile_order -fileset sources_1
-WARNING: [filemgmt 20-1445] Cannot import file 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd' on top of itself. Importing a file from the imported source directory can cause this problem.
-WARNING: [filemgmt 20-1445] Cannot import file 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd' on top of itself. Importing a file from the imported source directory can cause this problem.
-WARNING: [filemgmt 20-1445] Cannot import file 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd' on top of itself. Importing a file from the imported source directory can cause this problem.
-add_files -norecurse {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd} {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd}}
-WARNING: [filemgmt 56-12] File 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd' cannot be added to the project because it already exists in the project, skipping this file
-WARNING: [filemgmt 56-12] File 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd' cannot be added to the project because it already exists in the project, skipping this file
-WARNING: [filemgmt 56-12] File 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd' cannot be added to the project because it already exists in the project, skipping this file
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\OneDrive - Universidade de Lisboa\Documentos\Faculdade\GitHub\PSD\Project_3\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\OneDrive - Universidade de Lisboa\Documentos\Faculdade\GitHub\PSD\Project_3\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 10:49:44 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'rd_mems_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rd_mems_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/q08toBCD.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/Q08toBCD.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images_mem.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer1.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer2.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights2.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj rd_mems_tb_vlog.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights2
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module weights2_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module weights1
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_mux
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_mux__parameterized0
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_wrapper_init__parameterized1
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_prim_wrapper_init__parameterized2
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module weights1_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module images_mem
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_wrapper_init
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_wrapper_init__parameterized0
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_wrapper_init__parameterized1
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_prim_wrapper_init__parameterized2
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_v8_4_7
+INFO: [VRFC 10-311] analyzing module images_mem_blk_mem_gen_v8_4_7_synth
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/glbl.v:6]
+"xvhdl --incr --relax -prj rd_mems_tb_vhdl.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/P3/rd_mems_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rd_mems_tb'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1362.523 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rd_mems_tb_behav xil_defaultlib.rd_mems_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO est  desativado.
+ECHO est  desativado.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rd_mems_tb_behav xil_defaultlib.rd_mems_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011111110...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011111111...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b011110000...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_01=256'b0111100001...
+Compiling module xil_defaultlib.images_mem
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b100011110...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010110110...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0111011100...
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b0100000000...
+Compiling module xil_defaultlib.weights1
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INIT_00=256'b1111001100...
+Compiling module xil_defaultlib.weights2
+Compiling architecture behavior of entity xil_defaultlib.rd_mems_tb
+Built simulation snapshot rd_mems_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 1362.523 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rd_mems_tb_behav -key {Behavioral:sim_1:Functional:rd_mems_tb} -tclbatch {rd_mems_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source rd_mems_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1397.375 ; gain = 34.852
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rd_mems_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:33 . Memory (MB): peak = 1397.375 ; gain = 34.852
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
 ERROR: [Common 17-180] Spawn failed: No error
 launch_runs synth_1 -jobs 6
-WARNING: [Project 1-577] IP run images_mem_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-577] IP run weights1_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-577] IP run weights2_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-577] IP run Q08toBCD_synth_1 is available but is out of date. Since the IP is locked, the synthesis checkpoint cannot be updated. The out-of-date checkpoint will be used and it may result in incorrect behavior.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci
-
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci
-
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci
-
-WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci
-
-WARNING: [Project 1-576] IP 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci' in run images_mem_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
-Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-576] IP 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci' in run weights1_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
-Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-576] IP 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci' in run weights2_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
-Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
-WARNING: [Project 1-576] IP 'C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci' in run Q08toBCD_synth_1 is locked, no out-of-context (OOC) run will be launched. The run may not be able to complete.
-Please select 'Report IP Status' from 'Tools/Report' or run the Tcl command 'report_ip_status' for more information.
-[Thu Oct 26 10:23:31 2023] Launched images_mem_synth_1, weights1_synth_1, weights2_synth_1, Q08toBCD_synth_1...
-Run output will be captured here:
-images_mem_synth_1: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/images_mem_synth_1/runme.log
-weights1_synth_1: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights1_synth_1/runme.log
-weights2_synth_1: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/weights2_synth_1/runme.log
-Q08toBCD_synth_1: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/Q08toBCD_synth_1/runme.log
-[Thu Oct 26 10:23:31 2023] Launched synth_1...
-Run output will be captured here: C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
-get_board_parts
-digilentinc.com:basys3:part0:1.2 xilinx.com:ac701:part0:1.4
+[Thu Oct 26 11:18:34 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 11:21:52 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 11:22:33 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:02:37 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:07:10 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:10]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'component' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:20]
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:10]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'component' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:20]
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'end' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:10]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'component' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:20]
+[Thu Oct 26 12:15:27 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:26:37 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:33:11 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+launch_runs synth_1 -jobs 6
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:34:38 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'rd_mems_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'rd_mems_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/q08toBCD.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/Q08toBCD.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images_mem.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer1.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer2.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights2.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj rd_mems_tb_vlog.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+"xvhdl --incr --relax -prj rd_mems_tb_vhdl.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rd_mems_tb_behav xil_defaultlib.rd_mems_tb xil_defaultlib.glbl -log elaborate.log"
+ECHO est  desativado.
+ECHO est  desativado.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rd_mems_tb_behav xil_defaultlib.rd_mems_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "rd_mems_tb_behav -key {Behavioral:sim_1:Functional:rd_mems_tb} -tclbatch {rd_mems_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source rd_mems_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'rd_mems_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1419.020 ; gain = 0.000
+run 1 us
+run 1 us
+run 1 ms
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2505.180 ; gain = 3.449
+set_property top testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'testbench'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: O arquivo já está sendo usado por outro processo: "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'testbench'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/q08toBCD.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/Q08toBCD.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images_mem.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer1.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer2.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights2.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbench_vhdl.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Circuit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ControlUnit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Datapath'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/Project_3/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log"
+ECHO est  desativado.
+ECHO est  desativado.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-718] formal port <w1> does not exist in entity <Circuit>.  Please compare the definition of block <Circuit> to its component declaration and its instantion to detect the mismatch. [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/Project_3/Testbench.vhd:14]
+ERROR: [VRFC 10-718] formal port <w2> does not exist in entity <Circuit>.  Please compare the definition of block <Circuit> to its component declaration and its instantion to detect the mismatch. [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/Project_3/Testbench.vhd:15]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbench in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2505.410 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:40:26 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'testbench'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/q08toBCD.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/Q08toBCD.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images_mem.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer1.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer2.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights2.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj testbench_vhdl.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sim_1/imports/Project_3/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testbench'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log"
+ECHO est  desativado.
+ECHO est  desativado.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'p' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:20]
+ERROR: [VRFC 10-3353] formal port 'w1_out' has no actual or default value [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:9]
+ERROR: [VRFC 10-3353] formal port 'w2_out' has no actual or default value [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:10]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbench in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2505.410 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top fpga_basicIO_mems [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sim_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 12:51:47 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\fpga_basicIO_mems.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sim_1\imports\Project_3\Testbench.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'fpga_basicIO_mems'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'fpga_basicIO_mems' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/q08toBCD.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/Q08toBCD.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/images_mem.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer1.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights1.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/layer2.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/weights2.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj fpga_basicIO_mems_vlog.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Q08toBCD
+INFO: [VRFC 10-311] analyzing module Q08toBCD_dist_mem_gen_v8_0_14
+INFO: [VRFC 10-311] analyzing module Q08toBCD_dist_mem_gen_v8_0_14_synth
+INFO: [VRFC 10-311] analyzing module Q08toBCD_rom
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj fpga_basicIO_mems_vhdl.prj"
+ECHO est  desativado.
+ECHO est  desativado.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debouncer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'disp7m'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mem_acesses'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fpga_basicIO_mems'
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2505.410 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fpga_basicIO_mems_behav xil_defaultlib.fpga_basicIO_mems xil_defaultlib.glbl -log elaborate.log"
+ECHO est  desativado.
+ECHO est  desativado.
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fpga_basicIO_mems_behav xil_defaultlib.fpga_basicIO_mems xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'p' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:20]
+ERROR: [VRFC 10-3353] formal port 'clk' has no actual or default value [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:7]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 2505.410 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close_project
+open_project C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+launch_runs synth_1 -jobs 6
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+ERROR: [Common 17-180] Spawn failed: No error
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 15:01:55 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+launch_runs synth_1 -jobs 6
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\ControlUnit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Circuit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\Project_3\Datapath.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\guivi\Downloads\P3_baseline\nn_rd_mems.xpr\nn_rd_mems\nn_rd_mems.srcs\sources_1\imports\P3\mem_acesses.vhd:]
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+launch_runs synth_1 -jobs 6
+[Thu Oct 26 15:04:13 2023] Launched synth_1...
+Run output will be captured here: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 10:26:31 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 15:12:19 2023...

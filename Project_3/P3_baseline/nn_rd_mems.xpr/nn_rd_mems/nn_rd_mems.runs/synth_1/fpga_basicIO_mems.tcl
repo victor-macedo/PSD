@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.tcl"
+  variable script "C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.statsThreshold 360
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -78,38 +77,41 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.cache/wt [current_project]
+set_property parent.project_path C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.board} [current_project]
+set_property board_part_repo_paths {C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.board} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo {c:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/images.coe}}
-add_files {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/layer1.coe}}
-add_files {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/layer2.coe}}
-add_files {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/q08toBCD.coe}}
+add_files C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/images.coe
+add_files C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/layer1.coe
+add_files C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/layer2.coe
+add_files C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/q08toBCD.coe
 read_vhdl -library xil_defaultlib {
-  {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd}
-  {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd}
-  {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd}
-  {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd}
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd
+  C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd
 }
-read_ip -quiet {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_ooc.xdc}}]
+read_ip -quiet C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/images_mem/images_mem.xci
+set_property used_in_implementation false [get_files -all c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem_ooc.xdc]
 
-read_ip -quiet {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1_ooc.xdc}}]
+read_ip -quiet C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci
+set_property used_in_implementation false [get_files -all c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1_ooc.xdc]
 
-read_ip -quiet {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2_ooc.xdc}}]
+read_ip -quiet C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci
+set_property used_in_implementation false [get_files -all c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_ooc.xdc]
 
-read_ip -quiet {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/Q08toBCD/Q08toBCD.xci}}
-set_property used_in_implementation false [get_files -all {{c:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD_ooc.xdc}}]
+read_ip -quiet C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci
+set_property used_in_implementation false [get_files -all c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -120,12 +122,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc}}]
+read_xdc C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {C:/Users/guivi/OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp}
+read_checkpoint -auto_incremental -incremental C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
