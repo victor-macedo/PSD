@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/temp/teste/teste.gen/sources_1/ip/images_mem/sim/images_mem.v,1698429237,verilog,,,,images_mem,,,,,,,,
+C:/temp/teste/teste.gen/sources_1/ip/weights1/sim/weights1.v,1698429234,verilog,,C:/temp/teste/teste.gen/sources_1/ip/images_mem/sim/images_mem.v,,weights1,,,,,,,,
+C:/temp/teste/teste.gen/sources_1/ip/weights2/sim/weights2.v,1698429231,verilog,,C:/temp/teste/teste.gen/sources_1/ip/weights1/sim/weights1.v,,weights2,,,,,,,,
+C:/temp/teste/teste.sim/sim_1/behav/xsim/glbl.v,1698312717,verilog,,,,glbl,,,,,,,,
+C:/temp/teste/teste.srcs/sim_1/imports/Project_3/Testbench.vhd,1698399454,vhdl,,,,testbench,,,,,,,,
+C:/temp/teste/teste.srcs/sources_1/imports/P3/mem_acesses.vhd,1698415535,vhdl,,,,mem_acesses,,,,,,,,
+C:/temp/teste/teste.srcs/sources_1/imports/Project_3/Circuit.vhd,1698417446,vhdl,,,,circuit,,,,,,,,
+C:/temp/teste/teste.srcs/sources_1/imports/Project_3/ControlUnit.vhd,1698429290,vhdl,,,,controlunit,,,,,,,,
+C:/temp/teste/teste.srcs/sources_1/imports/Project_3/Datapath.vhd,1698428241,vhdl,,,,datapath,,,,,,,,
