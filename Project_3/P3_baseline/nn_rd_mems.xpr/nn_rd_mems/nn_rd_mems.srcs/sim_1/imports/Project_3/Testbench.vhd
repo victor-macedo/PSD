@@ -9,8 +9,7 @@ architecture Behavioral of testbench is
     component circuit
        Port ( 
           clk, rst_control : in std_logic;
-          res: out std_logic_vector (3 downto 0);
-          p : in std_logic_vector (31 downto 0)
+          res: out std_logic_vector (3 downto 0)
       );
     end component;
 
@@ -18,10 +17,10 @@ architecture Behavioral of testbench is
     -- Inputs
     signal clk : std_logic := '0';
     signal rst_control : std_logic := '0';
-    signal p:  std_logic_vector (31 downto 0) := (others => '0'); -- Tamanho de 0 a +256
-    signal w1:  std_logic_vector (15 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    --signal p:  std_logic_vector (31 downto 0) := (others => '0'); -- Tamanho de 0 a +256
+    --signal w1:  std_logic_vector (15 downto 0) := (others => '0'); -- Tamanho de 0 a +256
     -- Outputs
-   signal w2 : std_logic_vector (31 downto 0);
+   --signal w2 : std_logic_vector (31 downto 0);
     signal res : std_logic_vector(3 downto 0) := (others => '0');
    
     -- Clock period definitions
@@ -31,7 +30,6 @@ architecture Behavioral of testbench is
      uut: circuit PORT MAP (
      clk => clk,
      rst_control => rst_control,
-     p => p,
      res => res
      );
     -- Clock definition
@@ -45,21 +43,7 @@ architecture Behavioral of testbench is
     
     
     rst_control <= '1' after 20 ns,
-     '0' after 40 ns,
-     '1' after 220 ns,
-     '0' after 240 ns,
-     '1' after 385 ns,
-     '0' after 405 ns;
-     
-     p <= X"67676767" after 40 ns,
-      X"12121212" after 200 ns,
-      X"C3C3C3C3" after 360 ns;
-     w1 <= X"6767" after 40 ns,
-     X"3737" after 200 ns,
-    X"E4E4" after 360 ns;
-    w2 <= X"13131371" after 40 ns,
-      X"16161616" after 200 ns,
-      X"A3A3A3A3" after 360 ns;
+     '0' after 40 ns;
      
      wait;
     end process; 

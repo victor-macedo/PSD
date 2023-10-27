@@ -70,8 +70,7 @@ architecture Behavioral of fpga_basicIO_mems is
   component circuit
     Port ( 
       clk, rst_control : in std_logic;
-      res: out std_logic_vector (3 downto 0);
-      p : in std_logic_vector (31 downto 0)
+      res: out std_logic_vector (3 downto 0)
       );
   end component;
   
@@ -180,7 +179,6 @@ begin
   inst_circuito: circuit port map(
       clk => clk,
       rst_control => btnUreg,
-      p => im_row,
       res => res); --provavelmente errado
          
   process (clk)

@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity ControlUnit is
     Port (
         clk, rst_control,done1 : in std_logic;
-        rst_dpath,en_count1,en_count2 : out std_logic
+        rst_dpath,en_count1,en_count2 : out std_logic:= '0'
     );
 end ControlUnit;
 

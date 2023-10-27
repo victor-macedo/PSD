@@ -14,7 +14,7 @@ ECHO est† desativado.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source fpga_basicIO_mems.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 451.816 ; gain = 182.359
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 451.934 ; gain = 185.305
 Command: read_checkpoint -auto_incremental -incremental C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,186 +27,127 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12188
+INFO: [Synth 8-7075] Helper process launched with PID 19576
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1298.902 ; gain = 440.965
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1299.180 ; gain = 440.941
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fpga_basicIO_mems' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:48]
-INFO: [Synth 8-3491] module 'Q08toBCD' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/Q08toBCD_stub.vhdl:6' bound to instance 'instance_toBCD' of component 'Q08toBCD' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'Q08toBCD' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/Q08toBCD_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'disp7m' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd:9' bound to instance 'inst_disp7m' of component 'disp7m' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:153]
+INFO: [Synth 8-3491] module 'Q08toBCD' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/Q08toBCD_stub.vhdl:6' bound to instance 'instance_toBCD' of component 'Q08toBCD' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'Q08toBCD' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/Q08toBCD_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'disp7m' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd:9' bound to instance 'inst_disp7m' of component 'disp7m' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'disp7m' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'disp7m' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/disp7m.vhd:21]
-INFO: [Synth 8-3491] module 'mem_acesses' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:13' bound to instance 'inst_mems' of component 'mem_acesses' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'mem_acesses' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:23]
-WARNING: [Synth 8-5640] Port 'clk' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-WARNING: [Synth 8-5640] Port 'rst_dpath' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-WARNING: [Synth 8-5640] Port 'en_count1' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-WARNING: [Synth 8-5640] Port 'en_count2' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-WARNING: [Synth 8-5640] Port 'res' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-WARNING: [Synth 8-5640] Port 'done1' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:66]
-INFO: [Synth 8-3491] module 'Datapath' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:5' bound to instance 'inst_datapath' of component 'Datapath' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:19]
-INFO: [Synth 8-3491] module 'images_mem' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/images_mem_stub.vhdl:6' bound to instance 'instance_images' of component 'images_mem' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'images_mem' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/images_mem_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'weights1' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/weights1_stub.vhdl:6' bound to instance 'instance_weights1' of component 'weights1' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:105]
-INFO: [Synth 8-638] synthesizing module 'weights1' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/weights1_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'weights2' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/weights2_stub.vhdl:6' bound to instance 'instance_weights2' of component 'weights2' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:119]
-INFO: [Synth 8-638] synthesizing module 'weights2' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12868-Victor_Yoga/realtime/weights2_stub.vhdl:22]
-INFO: [Synth 8-256] done synthesizing module 'mem_acesses' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:23]
+WARNING: [Synth 8-5640] Port 'addrin2' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:87]
+INFO: [Synth 8-3491] module 'mem_acesses' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:13' bound to instance 'inst_mems' of component 'mem_acesses' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'mem_acesses' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:24]
+INFO: [Synth 8-3491] module 'images_mem' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/images_mem_stub.vhdl:6' bound to instance 'instance_images' of component 'images_mem' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'images_mem' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/images_mem_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'weights1' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/weights1_stub.vhdl:6' bound to instance 'instance_weights1' of component 'weights1' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'weights1' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/weights1_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'weights2' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/weights2_stub.vhdl:6' bound to instance 'instance_weights2' of component 'weights2' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'weights2' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/.Xil/Vivado-12400-Victor_Yoga/realtime/weights2_stub.vhdl:22]
+INFO: [Synth 8-256] done synthesizing module 'mem_acesses' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:24]
 	Parameter DEBNC_CLOCKS bound to: 1048576 - type: integer 
 	Parameter PORT_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd:42' bound to instance 'Inst_btn_debounce' of component 'debouncer' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:171]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd:42' bound to instance 'Inst_btn_debounce' of component 'debouncer' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:170]
 INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd:50]
 	Parameter DEBNC_CLOCKS bound to: 1048576 - type: integer 
 	Parameter PORT_WIDTH bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'debouncer' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/debouncer.vhd:50]
-INFO: [Synth 8-3491] module 'Circuit' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:5' bound to instance 'inst_circuito' of component 'circuit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:180]
-INFO: [Synth 8-638] synthesizing module 'Circuit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:13]
-INFO: [Synth 8-3491] module 'ControlUnit' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:5' bound to instance 'inst_control' of component 'ControlUnit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:34]
+INFO: [Synth 8-3491] module 'Circuit' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:5' bound to instance 'inst_circuito' of component 'circuit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'Circuit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:12]
+INFO: [Synth 8-3491] module 'ControlUnit' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:5' bound to instance 'inst_control' of component 'ControlUnit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:32]
 INFO: [Synth 8-638] synthesizing module 'ControlUnit' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:12]
 WARNING: [Synth 8-614] signal 'rst_control' is read in the process but is not in the sensitivity list [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:32]
 WARNING: [Synth 8-614] signal 'done1' is read in the process but is not in the sensitivity list [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'ControlUnit' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:12]
-WARNING: [Synth 8-5640] Port 'w1_out' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:23]
-WARNING: [Synth 8-5640] Port 'w2_out' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:23]
-WARNING: [Synth 8-5640] Port 'count1' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:23]
-WARNING: [Synth 8-5640] Port 'count2' is missing in component declaration [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:23]
 INFO: [Synth 8-3491] module 'Datapath' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:5' bound to instance 'inst_datapath' of component 'Datapath' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:39]
-INFO: [Synth 8-256] done synthesizing module 'Circuit' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:13]
+INFO: [Synth 8-3491] module 'mem_acesses' declared at 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:13' bound to instance 'inst_datapath' of component 'mem_acesses' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Circuit' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'fpga_basicIO_mems' (0#1) [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element accum1_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:73]
-WARNING: [Synth 8-6014] Unused sequential element p_reg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:89]
-WARNING: [Synth 8-6014] Unused sequential element accum1_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:90]
-WARNING: [Synth 8-3848] Net en_count1 in module/entity Circuit does not have driver. [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:32]
-WARNING: [Synth 8-3848] Net en_count2 in module/entity Circuit does not have driver. [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd:32]
-WARNING: [Synth 8-6014] Unused sequential element btnCreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:189]
-WARNING: [Synth 8-6014] Unused sequential element btnLreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:191]
-WARNING: [Synth 8-6014] Unused sequential element btnRreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:192]
-WARNING: [Synth 8-6014] Unused sequential element btnDreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:193]
-WARNING: [Synth 8-7129] Port p[31] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[30] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[29] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[28] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[27] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[26] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[25] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[24] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[23] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[22] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[21] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[20] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[19] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[18] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[17] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[16] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[15] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[14] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[13] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[12] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[11] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[10] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[9] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[8] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[7] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[6] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[5] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[4] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[3] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[2] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[1] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port p[0] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[15] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[14] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[13] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[12] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[11] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[10] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[9] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[8] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[7] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[6] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[5] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[4] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[3] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[2] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[1] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port w1_out[0] in module Datapath is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[12] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[11] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[10] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[9] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[8] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[7] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[6] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[5] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[4] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[3] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[2] in module mem_acesses is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addrin[1] in module mem_acesses is either unconnected or has no load
+WARNING: [Synth 8-3848] Net count1 in module/entity mem_acesses does not have driver. [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/mem_acesses.vhd:72]
+WARNING: [Synth 8-6014] Unused sequential element accum1_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element accum1_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:106]
+WARNING: [Synth 8-6014] Unused sequential element btnCreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:187]
+WARNING: [Synth 8-6014] Unused sequential element btnLreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:189]
+WARNING: [Synth 8-6014] Unused sequential element btnRreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:190]
+WARNING: [Synth 8-6014] Unused sequential element btnDreg_reg was removed.  [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/P3/fpga_basicIO_mems.vhd:191]
 WARNING: [Synth 8-7129] Port addrin[0] in module mem_acesses is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.883 ; gain = 555.945
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.883 ; gain = 555.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.883 ; gain = 555.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.883 ; gain = 555.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.883 ; gain = 555.945
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.883 ; gain = 555.645
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1413.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1413.883 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem/images_mem_in_context.xdc] for cell 'inst_mems/instance_images'
 Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem/images_mem_in_context.xdc] for cell 'inst_mems/instance_images'
+Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem/images_mem_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_images'
+Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/images_mem/images_mem/images_mem_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_images'
 Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1/weights1_in_context.xdc] for cell 'inst_mems/instance_weights1'
 Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1/weights1_in_context.xdc] for cell 'inst_mems/instance_weights1'
+Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1/weights1_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_weights1'
+Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights1/weights1/weights1_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_weights1'
 Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD/Q08toBCD_in_context.xdc] for cell 'instance_toBCD'
 Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/Q08toBCD/Q08toBCD/Q08toBCD_in_context.xdc] for cell 'instance_toBCD'
 Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2/weights2_in_context.xdc] for cell 'inst_mems/instance_weights2'
 Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2/weights2_in_context.xdc] for cell 'inst_mems/instance_weights2'
+Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2/weights2_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_weights2'
+Finished Parsing XDC File [c:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.gen/sources_1/ip/weights2/weights2/weights2_in_context.xdc] for cell 'inst_circuito/inst_datapath/inst_datapath/instance_weights2'
 Parsing XDC File [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc]
 Finished Parsing XDC File [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/constrs_1/imports/P3/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fpga_basicIO_mems_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/fpga_basicIO_mems_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1444.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1479.312 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 O sistema n∆o pode encontrar o caminho especificado.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1444.102 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1479.312 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_circuito/inst_datapath/inst_datapath/instance_images' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_circuito/inst_datapath/inst_datapath/instance_weights1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_circuito/inst_datapath/inst_datapath/instance_weights2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_mems/instance_images' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_mems/instance_weights1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'inst_mems/instance_weights2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst_mems/instance_images. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst_circuito/inst_datapath/inst_datapath/instance_images. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst_mems/instance_weights1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst_circuito/inst_datapath/inst_datapath/instance_weights1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for instance_toBCD. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for inst_mems/instance_weights2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst_circuito/inst_datapath/inst_datapath/instance_weights2. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'currstate_reg' in module 'ControlUnit'
 WARNING: [Synth 8-327] inferring latch for variable 'en_count1_reg' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:40]
@@ -220,28 +161,29 @@ WARNING: [Synth 8-327] inferring latch for variable 'en_count1_reg' [C:/Users/gu
 INFO: [Synth 8-3354] encoded FSM with state register 'currstate_reg' using encoding 'one-hot' in module 'ControlUnit'
 WARNING: [Synth 8-327] inferring latch for variable 'en_count2_reg' [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   36 Bit       Adders := 2     
-	   2 Input   25 Bit       Adders := 2     
-	   2 Input    7 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 2     
+	   2 Input   36 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 5     
 +---Registers : 
-	               36 Bit    Registers := 2     
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	                7 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input  512 Bit        Muxes := 2     
+	   2 Input  512 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 4     
 	   2 Input   12 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 1     
@@ -250,8 +192,8 @@ Detailed RTL Component Info :
 	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   4 Input    1 Bit        Muxes := 1     
-	   3 Input    1 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -268,16 +210,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP inst_mems/inst_datapath/mul2_sg1, operation Mode is: A*B.
-DSP Report: operator inst_mems/inst_datapath/mul2_sg1 is absorbed into DSP inst_mems/inst_datapath/mul2_sg1.
-DSP Report: Generating DSP inst_mems/inst_datapath/res2_add_sg10, operation Mode is: PCIN+A*B.
-DSP Report: operator inst_mems/inst_datapath/res2_add_sg10 is absorbed into DSP inst_mems/inst_datapath/res2_add_sg10.
-DSP Report: operator inst_mems/inst_datapath/mul2_sg2 is absorbed into DSP inst_mems/inst_datapath/res2_add_sg10.
-DSP Report: Generating DSP inst_mems/inst_datapath/mul2_sg3, operation Mode is: A*B.
-DSP Report: operator inst_mems/inst_datapath/mul2_sg3 is absorbed into DSP inst_mems/inst_datapath/mul2_sg3.
-DSP Report: Generating DSP inst_mems/inst_datapath/res2_add_sg20, operation Mode is: PCIN+A*B.
-DSP Report: operator inst_mems/inst_datapath/res2_add_sg20 is absorbed into DSP inst_mems/inst_datapath/res2_add_sg20.
-DSP Report: operator inst_mems/inst_datapath/mul2_sg4 is absorbed into DSP inst_mems/inst_datapath/res2_add_sg20.
 DSP Report: Generating DSP inst_circuito/inst_datapath/mul2_sg1, operation Mode is: A*B.
 DSP Report: operator inst_circuito/inst_datapath/mul2_sg1 is absorbed into DSP inst_circuito/inst_datapath/mul2_sg1.
 DSP Report: Generating DSP inst_circuito/inst_datapath/res2_add_sg10, operation Mode is: PCIN+A*B.
@@ -288,22 +220,13 @@ DSP Report: operator inst_circuito/inst_datapath/mul2_sg3 is absorbed into DSP i
 DSP Report: Generating DSP inst_circuito/inst_datapath/res2_add_sg20, operation Mode is: PCIN+A*B.
 DSP Report: operator inst_circuito/inst_datapath/res2_add_sg20 is absorbed into DSP inst_circuito/inst_datapath/res2_add_sg20.
 DSP Report: operator inst_circuito/inst_datapath/mul2_sg4 is absorbed into DSP inst_circuito/inst_datapath/res2_add_sg20.
-WARNING: [Synth 8-3332] Sequential element (inst_circuito/inst_control/en_count1_reg) is unused and will be removed from module fpga_basicIO_mems.
-WARNING: [Synth 8-3332] Sequential element (inst_circuito/inst_control/FSM_onehot_currstate_reg[2]) is unused and will be removed from module fpga_basicIO_mems.
-WARNING: [Synth 8-3332] Sequential element (inst_circuito/inst_control/FSM_onehot_currstate_reg[1]) is unused and will be removed from module fpga_basicIO_mems.
-WARNING: [Synth 8-3332] Sequential element (inst_circuito/inst_control/FSM_onehot_currstate_reg[0]) is unused and will be removed from module fpga_basicIO_mems.
-WARNING: [Synth 8-3332] Sequential element (inst_circuito/inst_control/en_count2_reg) is unused and will be removed from module fpga_basicIO_mems.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
- Sort Area is  inst_circuito/inst_datapath/mul2_sg1_5 : 0 0 : 817 1705 : Used 1 time 0
- Sort Area is  inst_circuito/inst_datapath/mul2_sg1_5 : 0 1 : 888 1705 : Used 1 time 0
- Sort Area is  inst_circuito/inst_datapath/mul2_sg3_4 : 0 0 : 817 1705 : Used 1 time 0
- Sort Area is  inst_circuito/inst_datapath/mul2_sg3_4 : 0 1 : 888 1705 : Used 1 time 0
- Sort Area is  inst_mems/inst_datapath/mul2_sg1_3 : 0 0 : 817 1705 : Used 1 time 0
- Sort Area is  inst_mems/inst_datapath/mul2_sg1_3 : 0 1 : 888 1705 : Used 1 time 0
- Sort Area is  inst_mems/inst_datapath/mul2_sg3_0 : 0 0 : 817 1705 : Used 1 time 0
- Sort Area is  inst_mems/inst_datapath/mul2_sg3_0 : 0 1 : 888 1705 : Used 1 time 0
+ Sort Area is  inst_circuito/inst_datapath/mul2_sg1_3 : 0 0 : 817 1705 : Used 1 time 0
+ Sort Area is  inst_circuito/inst_datapath/mul2_sg1_3 : 0 1 : 888 1705 : Used 1 time 0
+ Sort Area is  inst_circuito/inst_datapath/mul2_sg3_0 : 0 0 : 817 1705 : Used 1 time 0
+ Sort Area is  inst_circuito/inst_datapath/mul2_sg3_0 : 0 1 : 888 1705 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -312,10 +235,6 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Datapath    | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Datapath    | PCIN+A*B    | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Datapath    | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Datapath    | PCIN+A*B    | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |Datapath    | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |Datapath    | PCIN+A*B    | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |Datapath    | A*B         | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -330,19 +249,40 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[6]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[6] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[5]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[5] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[4]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[4] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[3]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[3] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[2]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[2] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[1]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[1] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter2_reg[0]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter2_reg[0] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:64]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/done1_reg__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/done1_reg ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:97]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[12]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[12] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[11]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[11] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[10]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[10] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[9]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[9] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[8]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[8] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[7]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[7] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[6]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[6] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[5]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[5] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[4]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[4] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[3]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[3] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[2]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[2] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[1]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[1] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
+INFO: [Synth 8-5966] Removing register instance (\inst_circuito/inst_datapath/counter1_reg[0]__0 ) from module (fpga_basicIO_mems) as it has self-loop and (\inst_circuito/inst_datapath/counter1_reg[0] ) is actual driver [C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Datapath.vhd:63]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -359,38 +299,64 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_mems/instance_weights1  has unconnected pin addra[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \inst_circuito/inst_datapath/inst_datapath/instance_weights1  has unconnected pin addra[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -401,54 +367,62 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |Q08toBCD      |         1|
-|2     |images_mem    |         1|
-|3     |weights1      |         1|
-|4     |weights2      |         1|
+|2     |images_mem    |         2|
+|3     |weights1      |         2|
+|4     |weights2      |         2|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+----------------+------+
-|      |Cell            |Count |
-+------+----------------+------+
-|1     |Q08toBCD_bbox   |     1|
-|2     |images_mem_bbox |     1|
-|3     |weights1_bbox   |     1|
-|4     |weights2_bbox   |     1|
-|5     |BUFG            |     1|
-|6     |CARRY4          |     5|
-|7     |LUT1            |     1|
-|8     |LUT2            |     4|
-|9     |LUT3            |    17|
-|10    |LUT5            |    22|
-|11    |LUT6            |    30|
-|12    |MUXF7           |     9|
-|13    |FDRE            |    25|
-|14    |IBUF            |     6|
-|15    |OBUF            |    28|
-+------+----------------+------+
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |Q08toBCD_bbox     |     1|
+|2     |images_mem_bbox   |     1|
+|3     |images_mem_bbox_1 |     1|
+|4     |weights1_bbox     |     1|
+|5     |weights1_bbox_2   |     1|
+|6     |weights2_bbox     |     1|
+|7     |weights2_bbox_3   |     1|
+|8     |BUFG              |     1|
+|9     |CARRY4            |    14|
+|10    |LUT1              |     4|
+|11    |LUT2              |     6|
+|12    |LUT3              |    21|
+|13    |LUT4              |     4|
+|14    |LUT5              |    29|
+|15    |LUT6              |    34|
+|16    |MUXF7             |     9|
+|17    |FDRE              |    80|
+|18    |FDSE              |     1|
+|19    |LD                |     2|
+|20    |IBUF              |    17|
+|21    |OBUF              |    28|
++------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 1449.188 ; gain = 555.945
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1449.188 ; gain = 591.250
+Synthesis finished with 0 errors, 26 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 1481.652 ; gain = 555.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1481.652 ; gain = 623.414
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1449.188 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1481.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1449.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1481.652 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
 O sistema n∆o pode encontrar o caminho especificado.
-Synth Design complete | Checksum: bb8041f7
+Synth Design complete | Checksum: d422db37
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 20 Warnings, 26 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1449.188 ; gain = 983.480
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1449.188 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 1481.652 ; gain = 1015.512
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1481.652 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fpga_basicIO_mems_utilization_synth.rpt -pb fpga_basicIO_mems_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 26 16:49:35 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 11:45:01 2023...

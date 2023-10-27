@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Oct 26 16:48:41 2023
-# Process ID: 12868
+# Start of session at: Fri Oct 27 11:44:10 2023
+# Process ID: 12400
 # Current directory: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1
 # Command line: vivado.exe -log fpga_basicIO_mems.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_basicIO_mems.tcl
 # Log file: C:/Users/guivi/Downloads/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.vds

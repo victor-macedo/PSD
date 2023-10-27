@@ -14,6 +14,7 @@ entity mem_acesses is
   port (
     clk: in std_logic;
     addrin: in std_logic_vector(12 downto 0);
+    addrin2: in std_logic_vector(6 downto 0);
     im_row: out std_logic_vector(31 downto 0);
     weight1_4: out std_logic_vector(15 downto 0);
     weight2_4: out std_logic_vector(31 downto 0)
@@ -63,15 +64,7 @@ COMPONENT weights2
     doutb : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) 
   );
 END COMPONENT;
-component Datapath
-Port ( 
-    p,w2_out : in std_logic_vector (31 downto 0);
-    w1_out : in std_logic_vector (15 downto 0);
-    count1: out std_logic_vector (12 downto 0);
-    count2: out std_logic_vector(6 downto 0)
-    );
-         
-end component;
+
   signal zeros : std_logic_vector(15 downto 0);
   signal im_out, w2_out : std_logic_vector(31 downto 0);
   signal w1_out : std_logic_vector(15 downto 0);
@@ -81,18 +74,12 @@ end component;
 
 begin
 zeros <= (others => '0');
-
-inst_datapath: Datapath port map (
-     p => im_out,
-    w1_out => w1_out , w2_out => w2_out,
-    count1 => count1, count2 =>count2
-     );
      
 instance_images : images_mem
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => count1(12 downto 1),
+    addra => addrin(12 downto 1), --deveria ser 7 downto 4
     dina => (others => '0'),
     douta => im_out,
     clkb => clk,
@@ -120,7 +107,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => count2,
+    addra => addrin2,
     dina => (others => '0'),
     douta => w2_out,
     clkb => clk,

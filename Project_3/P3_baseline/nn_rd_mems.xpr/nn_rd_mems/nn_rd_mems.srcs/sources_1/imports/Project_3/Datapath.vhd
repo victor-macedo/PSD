@@ -4,22 +4,27 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Datapath is
   Port ( 
-    clk, rst_dpath : in std_logic;
-    p : in std_logic_vector (31 downto 0);
-    en_count1,en_count2 : in std_logic;
-    w1_out : in std_logic_vector (15 downto 0); --REvisar formato
-    w2_out : in std_logic_vector (31 downto 0); 
+    clk, rst_dpath,en_count1,en_count2 : in std_logic;
     res : out std_logic_vector(3 downto 0);
-    count1: out std_logic_vector (12 downto 0);
-    count2: out std_logic_vector(6 downto 0);
     done1: out std_logic
     );
 end Datapath;
 
 architecture Behavioral of Datapath is
 
+component mem_acesses
+  port (
+    clk: in std_logic;
+    addrin: in std_logic_vector(12 downto 0);
+    addrin2: in std_logic_vector(6 downto 0);
+    im_row: out std_logic_vector(31 downto 0);
+    weight1_4: out std_logic_vector(15 downto 0);
+    weight2_4: out std_logic_vector(31 downto 0)
+    );
+end component;
+
 --Signals da parte 1
-signal p_reg : std_logic_vector (31 downto 0):= (p);    
+signal p_reg : std_logic_vector (31 downto 0);    
 signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
 signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
 signal res1_add_sg3 : signed(5 downto 0);--Q0.6
@@ -38,27 +43,35 @@ signal res2_add4 : std_logic_vector (35 downto 0); --Q22.14
 signal accum2,max: signed(35 downto 0):=( others => '0'); --Q22.14
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 
+signal count1: std_logic_vector (12 downto 0);
+signal count2: std_logic_vector(6 downto 0);
 signal counter1: unsigned (12 downto 0):=( others => '0');
 signal counter2: unsigned(6 downto 0):=( others => '0'); --Conta até 32 pra saber todos os neurons FINAIS foram calculados
 signal w1 : std_logic_vector (15 downto 0);
 signal w2 : std_logic_vector (31 downto 0); 
 
 begin
+inst_datapath: mem_acesses port map (
+    clk => clk, addrin =>count1,
+    addrin2 => count2,
+    im_row => p_reg,
+    weight1_4 => w1,weight2_4 => w2
+);
     --Falta chamar o endereco de memoria
-w1 <= w1_out;
-w2 <= w2_out;
+--w1 <= w1_out;
+--w2 <= w2_out;
 count1 <= std_logic_vector(counter1);
 count2 <= std_logic_vector(counter2);
 
 --Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
 
-    mul1_1 <= "0000" when p(0) = '0' else
+    mul1_1 <= "0000" when p_reg(0) = '0' else
             signed(w1(3 downto 0));
-    mul1_2 <= "0000" when p(1) = '0' else
+    mul1_2 <= "0000" when p_reg(1) = '0' else
     signed(w1(7 downto 4));
-    mul1_3 <= "0000" when p(2) = '0' else
+    mul1_3 <= "0000" when p_reg(2) = '0' else
     signed(w1(11 downto 8));
-    mul1_4 <= "0000" when p(3) = '0' else
+    mul1_4 <= "0000" when p_reg(3) = '0' else
     signed(w1(15 downto 12));
        
 -- adder1
@@ -79,6 +92,9 @@ process (clk)--process do reset
             if rst_dpath ='1' then
                 accum1 <= "0000000000000000";
                 accum2 <= "000000000000000000000000000000000000";
+                counter1 <= "0000000000000";
+                counter2 <= "0000000";
+                done1 <= '0';
             end if;  
        end if; 
 end process;     
@@ -103,7 +119,7 @@ process (clk)
     end if;       
    end process;
    
- process (clk)
+process (clk)--process do reset
     begin
         if clk'event and clk='1' then
             if en_count1 = '1' then
@@ -159,7 +175,7 @@ process (clk)
            if counter2(2 downto 0) = "111" then
                if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
                     max <= accum2;
-                    best <= std_logic_vector(counter2(6 downto 3)-1);--Salva o valor do contador, o qual representa o numero de saida       
+                    best <= std_logic_vector(unsigned(counter2(6 downto 3))-1);--Salva o valor do contador, o qual representa o numero de saida       
                end if;   
                if counter2(6 downto 3)="1010" then --Quando calcula todos os neuronios mostra a saida final
                     res <= best;  
@@ -172,7 +188,7 @@ process (clk)
 begin
     if clk'event and clk='1' then
            if en_count2 = '1' then
-                counter2 <= counter2 + 1; 
+                counter2 <= counter2 + 1;
             end if;          
     end if;
 end process;
