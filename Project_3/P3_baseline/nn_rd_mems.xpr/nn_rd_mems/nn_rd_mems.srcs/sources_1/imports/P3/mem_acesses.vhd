@@ -93,7 +93,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => count1,
+    addra => addrin,
     dina => (others => '0'),
     douta => w1_out,
     clkb => clk,

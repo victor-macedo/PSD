@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698403447" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/fpga_basicIO_mems.dcp">
-  <File Type="PA-TCL" Name="fpga_basicIO_mems.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="fpga_basicIO_mems_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="fpga_basicIO_mems_reports.tcl"/>
-  <File Type="RDS-RDS" Name="fpga_basicIO_mems.vds"/>
-  <File Type="RDS-UTIL" Name="fpga_basicIO_mems_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="fpga_basicIO_mems_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="fpga_basicIO_mems.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="fpga_basicIO_mems_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="fpga_basicIO_mems_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698426464" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/fpga_basicIO_mems.dcp">
+  <File Type="PA-TCL" Name="Circuit.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Circuit_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Circuit_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Circuit.vds"/>
+  <File Type="RDS-UTIL" Name="Circuit_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Circuit_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Circuit.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Circuit_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Circuit_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/Project_3/Circuit.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd"/>
-        <Attr Name="ImportTime" Val="1698311730"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Project_3/ControlUnit.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/ControlUnit.vhd"/>
@@ -35,22 +27,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/P3/debouncer.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/debouncer.vhd"/>
-        <Attr Name="ImportTime" Val="1668101145"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/P3/disp7m.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/disp7m.vhd"/>
-        <Attr Name="ImportTime" Val="1696520554"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/P3/mem_acesses.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/mem_acesses.vhd"/>
@@ -59,8 +35,35 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Project_3/Circuit.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../OneDrive - Universidade de Lisboa/Documentos/Faculdade/GitHub/PSD/Project_3/P3_baseline/nn_rd_mems.xpr/nn_rd_mems/nn_rd_mems.srcs/sources_1/imports/Project_3/Circuit.vhd"/>
+        <Attr Name="ImportTime" Val="1698311730"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P3/debouncer.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/debouncer.vhd"/>
+        <Attr Name="ImportTime" Val="1668101145"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/P3/disp7m.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/disp7m.vhd"/>
+        <Attr Name="ImportTime" Val="1696520554"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/P3/fpga_basicIO_mems.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../P3/fpga_basicIO_mems.vhd"/>
         <Attr Name="ImportTime" Val="1696596147"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -102,8 +105,7 @@
     <File Path="$PPRDIR/archive_project_summary.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="fpga_basicIO_mems"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="Circuit"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -143,5 +145,4 @@
   <BlockFileSet Type="BlockSrcs" Name="weights1"/>
   <BlockFileSet Type="BlockSrcs" Name="images_mem"/>
   <BlockFileSet Type="BlockSrcs" Name="weights2"/>
-  <BlockFileSet Type="BlockSrcs" Name="Q08toBCD"/>
 </GenRun>

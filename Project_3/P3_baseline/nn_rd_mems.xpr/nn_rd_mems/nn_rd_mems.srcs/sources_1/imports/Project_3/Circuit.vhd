@@ -14,14 +14,14 @@ architecture Behavioral of Circuit is
 component ControlUnit
 Port (
         clk,rst_control,done1 : in std_logic;
-        rst_dpath,en_count1,en_count2 : out std_logic
+        en_count1,en_count2 : out std_logic
  );
     
 end component;
 
 component Datapath
 Port ( 
-    clk, rst_dpath, en_count1,en_count2 : in std_logic;
+    clk, en_count1,en_count2 : in std_logic;
     res: out std_logic_vector (3 downto 0);
     done1: out std_logic
     );
@@ -37,7 +37,6 @@ begin
         );
      
     inst_datapath: Datapath port map (
-     rst_dpath => rst_control,
      clk => clk,
      res => res,
      done1 => done1,

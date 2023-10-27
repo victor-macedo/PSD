@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log fpga_basicIO_mems.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_basicIO_mems.tcl" );
+         "-log Circuit.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Circuit.tcl" );
 
 
 
