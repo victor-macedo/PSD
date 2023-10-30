@@ -1,5 +1,0 @@
-xpm_memory.sv,systemverilog,xpm,../../../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
-xpm_VCOMP.vhd,vhdl,xpm,../../../../../../Xilinx/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,
-dist_mem_gen_v8_0.v,verilog,dist_mem_gen_v8_0_13,../../../ipstatic/simulation/dist_mem_gen_v8_0.v,
-Q08toBCD.v,verilog,xil_defaultlib,../../../../nn_rd_mems.gen/sources_1/ip/Q08toBCD/sim/Q08toBCD.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

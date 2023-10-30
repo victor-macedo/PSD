@@ -1,2 +1,0 @@
-Q08toBCD.v,verilog,xil_defaultlib,../../../../nn_rd_mems.gen/sources_1/ip/Q08toBCD/sim/Q08toBCD.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v
