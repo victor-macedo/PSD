@@ -1,0 +1,186 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Oct  8 15:48:57 2023
+# Process ID: 4604
+# Current directory: C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13200
+# Log file: C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On: DESKTOP-MA7RD37, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16873 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/PrSD/nn_rd_mems/nn_rd_mems.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:14 . Memory (MB): peak = 1561.602 ; gain = 408.180
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/images.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../P3/images.coe'
+set_property CONFIG.Coe_File {c:/P3/images.coe} [get_ips images_mem]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/images.coe' provided. It will be converted relative to IP Instance files '../../../../../../P3/images.coe'
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/layer1.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../P3/layer1.coe'
+set_property CONFIG.Coe_File {c:/P3/layer1.coe} [get_ips weights1]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/layer1.coe' provided. It will be converted relative to IP Instance files '../../../../../../P3/layer1.coe'
+generate_target all [get_files  C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'weights1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'weights1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'weights1'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'weights1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'weights1'...
+catch { config_ip_cache -export [get_ips -all weights1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights1
+export_ip_user_files -of_objects [get_files C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci] -no_script -sync -force -quiet
+reset_run weights1_synth_1
+launch_runs weights1_synth_1 -jobs 4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights1
+[Sun Oct  8 17:24:42 2023] Launched weights1_synth_1...
+Run output will be captured here: C:/PrSD/nn_rd_mems/nn_rd_mems.runs/weights1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights1/weights1.xci] -directory C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files/sim_scripts -ip_user_files_dir C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files -ipstatic_source_dir C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/modelsim} {questa=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/questa} {riviera=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/riviera} {activehdl=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/layer2.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../../P3/layer2.coe'
+set_property CONFIG.Coe_File {c:/P3/layer2.coe} [get_ips weights2]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/P3/layer2.coe' provided. It will be converted relative to IP Instance files '../../../../../../P3/layer2.coe'
+generate_target all [get_files  C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'weights2'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'weights2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'weights2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'weights2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'weights2'...
+catch { config_ip_cache -export [get_ips -all weights2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights2
+export_ip_user_files -of_objects [get_files C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci] -no_script -sync -force -quiet
+reset_run weights2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/PrSD/nn_rd_mems/nn_rd_mems.runs/weights2_synth_1
+
+launch_runs weights2_synth_1 -jobs 4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: weights2
+[Sun Oct  8 17:25:06 2023] Launched weights2_synth_1...
+Run output will be captured here: C:/PrSD/nn_rd_mems/nn_rd_mems.runs/weights2_synth_1/runme.log
+export_simulation -of_objects [get_files C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/sources_1/ip/weights2/weights2.xci] -directory C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files/sim_scripts -ip_user_files_dir C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files -ipstatic_source_dir C:/PrSD/nn_rd_mems/nn_rd_mems.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/modelsim} {questa=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/questa} {riviera=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/riviera} {activehdl=C:/PrSD/nn_rd_mems/nn_rd_mems.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+INFO: [Project 1-1160] Copying file C:/PrSD/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp to C:/PrSD/nn_rd_mems/nn_rd_mems.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs synth_1 -jobs 4
+[Sun Oct  8 17:26:36 2023] Launched synth_1...
+Run output will be captured here: C:/PrSD/nn_rd_mems/nn_rd_mems.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Sun Oct  8 17:33:59 2023] Launched impl_1...
+Run output will be captured here: C:/PrSD/nn_rd_mems/nn_rd_mems.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Oct  8 17:37:24 2023] Launched impl_1...
+Run output will be captured here: C:/PrSD/nn_rd_mems/nn_rd_mems.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1926.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2580.980 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2580.980 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2580.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2690.746 ; gain = 1109.293
+archive_project C:/PrSD/nn_rd_mems.xpr.zip -temp_dir C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37 -force -exclude_run_results
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_'.
+INFO: [IP_Flow 19-7005] Skipping external file c:/P3/q08toBCD.coe
+INFO: [IP_Flow 19-7005] Skipping external file c:/P3/images.coe
+INFO: [IP_Flow 19-7005] Skipping external file c:/P3/layer1.coe
+INFO: [IP_Flow 19-7005] Skipping external file c:/P3/layer2.coe
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.cache/ip 
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+WARNING: [Coretcl 2-105] Run 'synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+INFO: [Project 1-1161] Replacing file C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.srcs/utils_1/imports/synth_1/fpga_basicIO_mems.dcp with file C:/Users/Horacio/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4604-DESKTOP-MA7RD37/PrjAr/_X_/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.dcp
+WARNING: [Coretcl 2-105] Run 'images_mem_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'images_mem_synth_1'...
+WARNING: [Coretcl 2-105] Run 'weights1_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'weights1_synth_1'...
+WARNING: [Coretcl 2-105] Run 'weights2_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'weights2_synth_1'...
+WARNING: [Coretcl 2-105] Run 'Q08toBCD_synth_1' is currently active
+INFO: [Coretcl 2-133] re-setting run 'Q08toBCD_synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'images_mem_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'weights1_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'weights2_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'Q08toBCD_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'Q08toBCD'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'Q08toBCD'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'images_mem'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'images_mem'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'weights1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'weights1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'weights2'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'weights2'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'utils_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'utils_1'
