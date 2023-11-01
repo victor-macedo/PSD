@@ -6,7 +6,7 @@ entity Datapath is
   Port ( 
     clk,en_count1,en_count2 : in std_logic;
     res : out std_logic_vector(3 downto 0);
-    done1: out std_logic
+    done1: out std_logic := '0'
     );
 end Datapath;
 
@@ -26,7 +26,7 @@ end component;
 --Signals da parte 1
 signal p : std_logic_vector (31 downto 0);  
 signal w1_sg1,w1_sg2,w1_sg3,w1_sg4 : signed(3 downto 0); --Q0.8  
-signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --MultiplicaÃ§Ã£o de 1bit por 4bits --Q-2.6
+signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
 signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
 signal res1_add_sg3 : signed(5 downto 0);--Q0.6
 signal res1_add_sg4 : signed(15 downto 0);--Q10.6
@@ -36,7 +36,7 @@ signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 
 --Signals da parte 2
 signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(15 downto 0);
 signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0); --Q0.8
-signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora Ã© a multiplicaÃ§Ã£o de 16 bits por 8 bits --Q10.14
+signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
 signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24 --Q11.14
 signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25 --Q12.14
 signal res2_add_sg4 : signed (35 downto 0); --Conferir tamanho do vetor --Q22.14
@@ -56,15 +56,15 @@ inst_datapath: mem_acesses port map (
     im_row => p,
     weight1_4 => w1,weight2_4 => w2
 );
---Mux1 entrada Por se tratar de uma multiplicaÃ§Ã£o de 0 e 1 um mux Ã© mais adequado
+--Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
 
-    mul1_1 <= "0000" when p(0) = '0' else
+    mul1_1 <= "0000" when p(to_integer(unsigned(count1))+0) = '0' else
             signed(w1(3 downto 0));
-    mul1_2 <= "0000" when p(1) = '0' else
+    mul1_2 <= "0000" when p((to_integer(unsigned(count1))+1)) = '0' else
             signed(w1(7 downto 4));
-    mul1_3 <= "0000" when p(2) = '0' else
+    mul1_3 <= "0000" when p((to_integer(unsigned(count1))+2)) = '0' else
             signed(w1(11 downto 8));
-    mul1_4 <= "0000" when p(3) = '0' else
+    mul1_4 <= "0000" when p((to_integer(unsigned(count1))+0)) = '0' else
             signed(w1(15 downto 12));
        
 -- adder1
@@ -83,15 +83,6 @@ process (clk) --process do done
         if clk'event and clk='1' then 
             if count1 = "1111111111111" then -- Se estiver finalizado
                 done1 <= '1';            
-            end if;
-        end if;
-    end process;
-
-process (clk) --process do p
-    begin
-        if clk'event and clk='1' then 
-            if en_count1 = '1' then -- Se estiver finalizado
-                p <= p(3 downto 0) & p(31 downto 4);            
             end if;
         end if;
     end process;
@@ -130,7 +121,7 @@ end process;
 process (clk) --process accum1
     begin
         if clk'event and clk='1' then 
-            if count1 = "1111111111111" then -- Se nÃ£o estiver finalizado  
+            if count1 = "1111111111111" then -- Se não estiver finalizado  
             accum1 <=res1_add_sg4;                         
                    if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
                         accum1 <= "0000000000000000";                            
@@ -150,7 +141,7 @@ end process;
 
 --Para a parte 2 do projeto o funcionamento vai ser semelhante ao primeiro 
 --Devera ser usado um contador de 3 bits, que incrementa com w2, ao chegar no valorz
---`111` ao invÃ©s de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
+--`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
 
 -- Multiplier  1
     hidden_sg1 <= signed(relu(15 downto 0));

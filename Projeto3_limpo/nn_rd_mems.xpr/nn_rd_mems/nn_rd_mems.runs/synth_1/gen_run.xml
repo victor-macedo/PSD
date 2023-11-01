@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698769354" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/fpga_basicIO_mems.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698774981" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/fpga_basicIO_mems.dcp">
   <File Type="PA-TCL" Name="Circuit.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Circuit_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Circuit_reports.tcl"/>
   <File Type="RDS-RDS" Name="Circuit.vds"/>
   <File Type="RDS-UTIL" Name="Circuit_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Circuit_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Circuit.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Circuit_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Circuit_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ControlUnit.vhd">
@@ -136,7 +133,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="weights1"/>
   <BlockFileSet Type="BlockSrcs" Name="images_mem"/>
+  <BlockFileSet Type="BlockSrcs" Name="weights1"/>
   <BlockFileSet Type="BlockSrcs" Name="weights2"/>
 </GenRun>

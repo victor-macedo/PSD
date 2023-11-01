@@ -55,7 +55,7 @@ architecture Behavioral of fpga_basicIO_mems is
   signal btn, btnDeBnc : std_logic_vector(4 downto 0);
   signal btnCreg, btnUreg, btnLreg, btnRreg, btnDreg, minus_sign: std_logic;   -- registered input buttons
   signal sw_reg : std_logic_vector(15 downto 0);  -- registered input switches
-  
+  signal res: std_logic_vector (3 downto 0);
   component disp7m
   port (
     digit3, digit2, digit1, digit0 : in std_logic_vector(3 downto 0);
@@ -65,6 +65,13 @@ architecture Behavioral of fpga_basicIO_mems is
     en_disp_l : out std_logic_vector(3 downto 0);
     segm_l : out std_logic_vector(6 downto 0);
     dp_l : out std_logic);
+  end component;
+  
+  component circuit
+    Port ( 
+      clk, rst_control : in std_logic;
+      res: out std_logic_vector (3 downto 0)
+      );
   end component;
   
   component debouncer
@@ -168,6 +175,11 @@ begin
 		signal_i => btn,
 		clk_i => clk,
 		signal_o => btnDeBnc );
+		
+  inst_circuito: circuit port map(
+      clk => clk,
+      rst_control => btnUreg,
+      res => res); --provavelmente errado
          
   process (clk)
     begin
