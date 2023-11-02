@@ -11,22 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="81,936.950 ns"></ZoomStartTime>
-      <ZoomEndTime time="82,045.251 ns"></ZoomEndTime>
-      <Cursor1Time time="81,955.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="11.311 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="270"></NameColumnWidth>
-      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+      <NameColumnWidth column_width="244"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/rst_control" type="logic">
-      <obj_property name="ElementShortName">rst_control</obj_property>
-      <obj_property name="ObjectShortName">rst_control</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/res" type="array">
       <obj_property name="ElementShortName">res[3:0]</obj_property>
@@ -40,14 +36,6 @@
       <obj_property name="ElementShortName">en_count2</obj_property>
       <obj_property name="ObjectShortName">en_count2</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/done2" type="logic">
-      <obj_property name="ElementShortName">done2</obj_property>
-      <obj_property name="ObjectShortName">done2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/done1" type="logic">
-      <obj_property name="ElementShortName">done1</obj_property>
-      <obj_property name="ObjectShortName">done1</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/p" type="array">
       <obj_property name="ElementShortName">p[31:0]</obj_property>
       <obj_property name="ObjectShortName">p[31:0]</obj_property>
@@ -55,27 +43,41 @@
    <wvobject fp_name="/testbench/uut/inst_datapath/count1" type="array">
       <obj_property name="ElementShortName">count1[12:0]</obj_property>
       <obj_property name="ObjectShortName">count1[12:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/accum1" type="array">
+      <obj_property name="ElementShortName">accum1[16:0]</obj_property>
+      <obj_property name="ObjectShortName">accum1[16:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg4" type="array">
+      <obj_property name="ElementShortName">res1_add_sg4[16:0]</obj_property>
+      <obj_property name="ObjectShortName">res1_add_sg4[16:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg3" type="array">
+      <obj_property name="ElementShortName">res1_add_sg3[5:0]</obj_property>
+      <obj_property name="ObjectShortName">res1_add_sg3[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/count2" type="array">
       <obj_property name="ElementShortName">count2[6:0]</obj_property>
       <obj_property name="ObjectShortName">count2[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w1" type="array">
-      <obj_property name="ElementShortName">w1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">w1[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w2" type="array">
-      <obj_property name="ElementShortName">w2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w2[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/accum2" type="array">
-      <obj_property name="ElementShortName">accum2[35:0]</obj_property>
-      <obj_property name="ObjectShortName">accum2[35:0]</obj_property>
+      <obj_property name="ElementShortName">accum2[37:0]</obj_property>
+      <obj_property name="ObjectShortName">accum2[37:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/max" type="array">
-      <obj_property name="ElementShortName">max[35:0]</obj_property>
-      <obj_property name="ObjectShortName">max[35:0]</obj_property>
+   <wvobject fp_name="/testbench/uut/inst_control/nextstate" type="other">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/rst_control" type="logic">
+      <obj_property name="ElementShortName">rst_control</obj_property>
+      <obj_property name="ObjectShortName">rst_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/currstate" type="other">
+      <obj_property name="ElementShortName">currstate</obj_property>
+      <obj_property name="ObjectShortName">currstate</obj_property>
    </wvobject>
 </wave_config>

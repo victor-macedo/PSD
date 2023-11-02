@@ -16,6 +16,7 @@ component mem_acesses
   port (
     clk: in std_logic;
     addrin: in std_logic_vector(12 downto 0);
+    addrin1: in std_logic_vector(12 downto 0);
     addrin2: in std_logic_vector(6 downto 0);
     im_row: out std_logic_vector(31 downto 0);
     weight1_4: out std_logic_vector(15 downto 0);
@@ -25,34 +26,36 @@ end component;
 
 --Signals da parte 1
 signal p : std_logic_vector (31 downto 0); 
-signal p_shift : std_logic_vector (31 downto 0); 
+signal p_shift : std_logic_vector (31 downto 0):= (others => '0'); 
 signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
 signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
 signal res1_add_sg3 : signed(5 downto 0);--Q0.6
-signal res1_add_sg4 : signed(15 downto 0);--Q10.6
-signal accum1: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits --Q10.6
-signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
+signal res1_add_sg4 : signed(16 downto 0);--Q10.6
+signal accum1: signed(16 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits --Q10.6
+signal relu: signed(543 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
 
 --Signals da parte 2
-signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(15 downto 0);
+signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(16 downto 0);
 signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0); --Q0.8
-signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
-signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24 --Q11.14
-signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25 --Q12.14
-signal res2_add_sg4 : signed (35 downto 0); --Conferir tamanho do vetor --Q22.14
+signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (24 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
+signal res2_add_sg1, res2_add_sg2 : signed(25 downto 0); --soma de dois de 24 --Q11.14
+signal res2_add_sg3 : signed(26 downto 0); --soma de dois de 25 --Q12.14
+signal res2_add_sg4 : signed (37 downto 0); --Conferir tamanho do vetor --Q22.14
 --signal res2_add4 : std_logic_vector (35 downto 0); --Q22.14
-signal accum2,max: signed(35 downto 0):=( others => '0'); --Q22.14
+signal accum2,max: signed(37 downto 0):=( others => '0'); --Q22.14
 
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 signal count1: std_logic_vector (12 downto 0) :=( others => '0');
 signal count2: std_logic_vector(6 downto 0) :=( others => '0');
 signal w1 : std_logic_vector (15 downto 0);
 signal w2 : std_logic_vector (31 downto 0); 
+signal addrin: std_logic_vector(12 downto 0);
 
 begin
+addrin <= "00000111" & count1(7 downto 3); --TIRAR NO FINAL
 inst_datapath: mem_acesses port map (
-    clk => clk, addrin =>count1,
-    addrin2 => count2,
+    clk => clk, addrin => addrin,
+    addrin1 =>count1, addrin2 => count2,
     im_row => p,
     weight1_4 => w1,weight2_4 => w2
 );
@@ -91,15 +94,15 @@ process (clk)--process do relu
     begin
         if clk'event and clk='1' then 
             if en_count2 = '1' then -- Se estiver finalizado
-                relu <= relu(63 downto 0) & relu(511 downto 64); --Shift pra parte 2 da rede
+                relu <= relu(67 downto 0) & relu(543 downto 68); --Shift pra parte 2 da rede
             else
                 if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
                    if accum1 > 0 then
-                        relu(511 downto 496) <= accum1;
+                        relu(543 downto 527) <= accum1;
                    else 
-                        relu(511 downto 496) <= "0000000000000000";              
+                        relu(543 downto 527) <= "00000000000000000";              
                    end if;     
-                   relu(495 downto 0) <= relu (511 downto 16);     
+                   relu(526 downto 0) <= relu (543 downto 17);     
                 end if;                           
             end if;    
         end if;
@@ -108,10 +111,10 @@ end process;
 process (clk) --process do accum2
     begin
         if clk'event and clk='1' then 
-            if en_count2 = '1' then -- Se estiver finalizado
-                if accum2 > max then
-                    accum2 <= "000000000000000000000000000000000000";
-                else
+            if en_count2 = '1' then -- Se estiver na parte 2
+                if count2(2 downto 0) = "111" then --Se chegar no final do numero calculado zera o acumulador
+                    accum2 <= "00000000000000000000000000000000000000";
+                else -- Do contrario continua a soma
                     accum2 <= res2_add_sg4;
                 end if;
             end if;    
@@ -121,10 +124,11 @@ end process;
 process (clk) --process accum1
     begin
         if clk'event and clk='1' then 
-            if en_count1 = '1' then -- Se não estiver finalizado  
-            accum1 <=res1_add_sg4;                         
+            if en_count1 = '1' then -- Se não estiver finalizado                          
                    if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
-                        accum1 <= "0000000000000000";                            
+                        accum1 <= "00000000000000000";    
+                   else
+                        accum1 <=res1_add_sg4;                          
                    end if;    
             end if;              
     end if;       
@@ -134,7 +138,11 @@ process (clk)
     begin
         if clk'event and clk='1' then
             if en_count1 = '1' then
-                p_shift <= p_shift(3 downto 0) & p_shift(31 downto 4);
+                if count1(2 downto 0) = "111" then
+                    p_shift <= p;
+                else
+                    p_shift <= p_shift(3 downto 0) & p_shift(31 downto 4);
+               end if;    
             end if;          
       end if;   
 end process;
@@ -153,22 +161,22 @@ end process;
 --`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
 
 -- Multiplier  1
-    hidden_sg1 <= signed(relu(15 downto 0));
+    hidden_sg1 <= signed(relu(16 downto 0));
     w2_sg1 <= signed(w2(7 downto 0)); 
     mul2_sg1 <= hidden_sg1 * w2_sg1;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 2 
-    hidden_sg2 <= signed(relu(31 downto 16));
+    hidden_sg2 <= signed(relu(33 downto 17));
     w2_sg2 <= signed(w2(15 downto 8)); 
     mul2_sg2 <= hidden_sg2 * w2_sg2;           --Se houver erro concatenar 0 no w
     
     -- Multiplier  3
-    hidden_sg3 <= signed(relu(47 downto 32));
+    hidden_sg3 <= signed(relu(50 downto 34));
     w2_sg3 <= signed(w2(23 downto 16)); 
     mul2_sg3 <= hidden_sg3 * w2_sg3;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 4 
-    hidden_sg4 <= signed(relu(63 downto 48));
+    hidden_sg4 <= signed(relu(67 downto 51));
     w2_sg4 <= signed(w2(31 downto 24)); 
     mul2_sg4 <= hidden_sg4 * w2_sg4;           --Se houver erro concatenar 0 no w
     

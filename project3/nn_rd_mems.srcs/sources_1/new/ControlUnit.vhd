@@ -21,7 +21,7 @@ type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2);
         --rst_dpath <= rst_control;
             if clk'event and clk = '1' then
                 if rst_control = '1' then
-                    currstate <= s_initial ;
+                    currstate <= CYCLE1 ;
                 else
                     currstate <= nextstate ;
                 end if ;
@@ -35,7 +35,6 @@ type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2);
                 when s_initial =>
                     en_count1 <= '0';
                     en_count2 <= '0';
-                    nextstate <= CYCLE1;
                 when CYCLE1 =>
                     en_count1 <= '1';
                     en_count2 <= '0';

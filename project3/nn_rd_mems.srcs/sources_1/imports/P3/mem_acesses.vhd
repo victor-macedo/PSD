@@ -14,6 +14,7 @@ entity mem_acesses is
   port (
     clk: in std_logic;
     addrin: in std_logic_vector(12 downto 0);
+    addrin1: in std_logic_vector(12 downto 0);
     addrin2: in std_logic_vector(6 downto 0);
     im_row: out std_logic_vector(31 downto 0);
     weight1_4: out std_logic_vector(15 downto 0);
@@ -79,7 +80,7 @@ instance_images : images_mem
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin(12 downto 1), --deveria ser 7 downto 4
+    addra => addrin(11 downto 0),
     dina => (others => '0'),
     douta => im_out,
     clkb => clk,
@@ -93,7 +94,7 @@ instance_weights1 : weights1
   PORT MAP (
     clka => clk,
     wea => "0",
-    addra => addrin,
+    addra => addrin1,
     dina => (others => '0'),
     douta => w1_out,
     clkb => clk,

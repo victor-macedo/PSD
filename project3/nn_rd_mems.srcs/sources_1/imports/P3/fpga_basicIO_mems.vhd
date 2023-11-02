@@ -114,7 +114,6 @@ begin
   digits_fixedp <= w1_fp when sw_reg(13)='0' else 
                    w2_fp when sw_reg(12) ='0' else
                    ("000000000000") & res; 
-  
   w1_1 <= weight1_4(3 downto 0) when sw_reg(12 downto 11)="00" else 
           weight1_4(7 downto 4) when sw_reg(12 downto 11)="01" else
           weight1_4(11 downto 8) when sw_reg(12 downto 11)="10" else 
@@ -149,8 +148,7 @@ begin
   instance_toBCD : Q08toBCD PORT MAP ( a => w2_1, spo => w2_fp(11 downto 0));
   w2_fp(15 downto 12) <= (others => '0');
   
-  addrin <= "00" & sw_reg(10 downto 0);
-  
+--  addrin <= "00" & sw_reg(10 downto 0);
   inst_disp7m: disp7m port map(
       digit3 => digits(15 downto 12), digit2 => digits(11 downto 8), digit1 => digits(7 downto 4), digit0 => digits(3 downto 0),
       dp3 => sw_reg(14), dp2 => '0', dp1 => '0', dp0 => '0', minus_sign => minus_sign,

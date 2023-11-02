@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Nov  1 23:22:08 2023
-# Process ID: 21644
+# Start of session at: Thu Nov  2 12:22:56 2023
+# Process ID: 15428
 # Current directory: C:/Users/guivi/Documents/PSD/projeto3_limpo_arquive.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1
 # Command line: vivado.exe -log fpga_basicIO_mems.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_basicIO_mems.tcl
 # Log file: C:/Users/guivi/Documents/PSD/projeto3_limpo_arquive.xpr/nn_rd_mems/nn_rd_mems.runs/synth_1/fpga_basicIO_mems.vds
