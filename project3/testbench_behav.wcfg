@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="11.311 ns"></ZoomEndTime>
-      <Cursor1Time time="0.000 ns"></Cursor1Time>
+      <ZoomStartTime time="942.250 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,059.551 ns"></ZoomEndTime>
+      <Cursor1Time time="1,025.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="244"></NameColumnWidth>
+      <NameColumnWidth column_width="202"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -28,14 +28,6 @@
       <obj_property name="ElementShortName">res[3:0]</obj_property>
       <obj_property name="ObjectShortName">res[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/en_count1" type="logic">
-      <obj_property name="ElementShortName">en_count1</obj_property>
-      <obj_property name="ObjectShortName">en_count1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/en_count2" type="logic">
-      <obj_property name="ElementShortName">en_count2</obj_property>
-      <obj_property name="ObjectShortName">en_count2</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/p" type="array">
       <obj_property name="ElementShortName">p[31:0]</obj_property>
       <obj_property name="ObjectShortName">p[31:0]</obj_property>
@@ -43,21 +35,84 @@
    <wvobject fp_name="/testbench/uut/inst_datapath/count1" type="array">
       <obj_property name="ElementShortName">count1[12:0]</obj_property>
       <obj_property name="ObjectShortName">count1[12:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/accum1" type="array">
-      <obj_property name="ElementShortName">accum1[16:0]</obj_property>
-      <obj_property name="ObjectShortName">accum1[16:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg4" type="array">
-      <obj_property name="ElementShortName">res1_add_sg4[16:0]</obj_property>
-      <obj_property name="ObjectShortName">res1_add_sg4[16:0]</obj_property>
+   <wvobject fp_name="/testbench/uut/inst_datapath/addrin" type="array">
+      <obj_property name="ElementShortName">addrin[12:0]</obj_property>
+      <obj_property name="ObjectShortName">addrin[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/w1" type="array">
+      <obj_property name="ElementShortName">w1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/p_mul1" type="logic">
+      <obj_property name="ElementShortName">p_mul1</obj_property>
+      <obj_property name="ObjectShortName">p_mul1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/p_mul2" type="logic">
+      <obj_property name="ElementShortName">p_mul2</obj_property>
+      <obj_property name="ObjectShortName">p_mul2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/p_mul3" type="logic">
+      <obj_property name="ElementShortName">p_mul3</obj_property>
+      <obj_property name="ObjectShortName">p_mul3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/p_mul4" type="logic">
+      <obj_property name="ElementShortName">p_mul4</obj_property>
+      <obj_property name="ObjectShortName">p_mul4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/mul1_1" type="array">
+      <obj_property name="ElementShortName">mul1_1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mul1_1[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/mul1_2" type="array">
+      <obj_property name="ElementShortName">mul1_2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mul1_2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/mul1_3" type="array">
+      <obj_property name="ElementShortName">mul1_3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mul1_3[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/mul1_4" type="array">
+      <obj_property name="ElementShortName">mul1_4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">mul1_4[3:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg1" type="array">
+      <obj_property name="ElementShortName">res1_add_sg1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">res1_add_sg1[4:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg2" type="array">
+      <obj_property name="ElementShortName">res1_add_sg2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">res1_add_sg2[4:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg3" type="array">
       <obj_property name="ElementShortName">res1_add_sg3[5:0]</obj_property>
       <obj_property name="ObjectShortName">res1_add_sg3[5:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/res1_add_sg4" type="array">
+      <obj_property name="ElementShortName">res1_add_sg4[16:0]</obj_property>
+      <obj_property name="ObjectShortName">res1_add_sg4[16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/accum1" type="array">
+      <obj_property name="ElementShortName">accum1[16:0]</obj_property>
+      <obj_property name="ObjectShortName">accum1[16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/count2" type="array">
       <obj_property name="ElementShortName">count2[6:0]</obj_property>
@@ -67,17 +122,19 @@
    <wvobject fp_name="/testbench/uut/inst_datapath/accum2" type="array">
       <obj_property name="ElementShortName">accum2[37:0]</obj_property>
       <obj_property name="ObjectShortName">accum2[37:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_control/nextstate" type="other">
-      <obj_property name="ElementShortName">nextstate</obj_property>
-      <obj_property name="ObjectShortName">nextstate</obj_property>
+   <wvobject fp_name="/testbench/uut/inst_datapath/best" type="array">
+      <obj_property name="ElementShortName">best[3:0]</obj_property>
+      <obj_property name="ObjectShortName">best[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_control/rst_control" type="logic">
-      <obj_property name="ElementShortName">rst_control</obj_property>
-      <obj_property name="ObjectShortName">rst_control</obj_property>
+   <wvobject fp_name="/testbench/uut/inst_datapath/max" type="array">
+      <obj_property name="ElementShortName">max[37:0]</obj_property>
+      <obj_property name="ObjectShortName">max[37:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_control/currstate" type="other">
-      <obj_property name="ElementShortName">currstate</obj_property>
-      <obj_property name="ObjectShortName">currstate</obj_property>
+   <wvobject fp_name="/testbench/uut/inst_datapath/relu_teste" type="array">
+      <obj_property name="ElementShortName">relu_teste[16:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_teste[16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
