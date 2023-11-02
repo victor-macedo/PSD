@@ -37,6 +37,7 @@ signal relu: signed(543 downto 0):=( others => '0'); -- O vetor relu possui 512 
 
 --Signals da parte 2
 signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(16 downto 0);
+signal relu_mul1,relu_mul2,relu_mul3,relu_mul4 :signed(16 downto 0);
 signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0); --Q0.8
 signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (24 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
 signal res2_add_sg1, res2_add_sg2 : signed(25 downto 0); --soma de dois de 24 --Q11.14
@@ -47,13 +48,13 @@ signal accum2,max: signed(37 downto 0):=( others => '0'); --Q22.14
 
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 signal count1,count_atraso: std_logic_vector (12 downto 0) :=( others => '0');
-signal count2: std_logic_vector(6 downto 0) :=( others => '0');
+signal count2,count2_atraso: std_logic_vector(6 downto 0) :=( others => '0');
 signal w1 : std_logic_vector (15 downto 0);
 signal w2 : std_logic_vector (31 downto 0); 
 signal addrin: std_logic_vector(12 downto 0);
 
 begin
-addrin <= "00000000" & count1(7 downto 3); --TIRAR NO FINAL
+addrin <= "00000010" & count1(7 downto 3); --TIRAR NO FINAL
 inst_datapath: mem_acesses port map (
     clk => clk, addrin => addrin,
     addrin1 =>count1, addrin2 => count2,
@@ -136,7 +137,7 @@ process (clk)--process do relu
     begin
         if clk'event and clk='1' then 
             if en_count2 = '1' then -- Se estiver na parte2
-                relu <= relu(67 downto 0) & relu(543 downto 68); --Shift pra parte 2 da rede
+--                relu <= relu(67 downto 0) & relu(543 downto 68); --Shift pra parte 2 da rede
             else --se estiver na parte1
                 if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
                    if accum1 > 0 then
@@ -190,25 +191,62 @@ end process;
 --Devera ser usado um contador de 3 bits, que incrementa com w2, ao chegar no valorz
 --`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
 
+    relu_mul1 <= relu(16 downto 0) when count2_atraso(2 downto 0) = "000" else
+              relu(84 downto 68) when count2_atraso(2 downto 0) = "001" else
+              relu(152 downto 136) when count2_atraso(2 downto 0) = "010" else
+              relu(220 downto 204) when count2_atraso(2 downto 0) = "011" else
+              relu(288 downto 272) when count2_atraso(2 downto 0) = "100" else 
+              relu(356 downto 340) when count2_atraso(2 downto 0) = "101" else 
+              relu(424 downto 408) when count2_atraso(2 downto 0) = "110" else
+              relu(492 downto 476);
+              
+   relu_mul2 <= relu(33 downto 17) when count2_atraso(2 downto 0) = "000" else
+              relu(101 downto 85) when count2_atraso(2 downto 0) = "001" else
+              relu(169 downto 153) when count2_atraso(2 downto 0) = "010" else
+              relu(237 downto 221) when count2_atraso(2 downto 0) = "011" else
+              relu(305 downto 289) when count2_atraso(2 downto 0) = "100" else 
+              relu(373 downto 357) when count2_atraso(2 downto 0) = "101" else 
+              relu(441 downto 425) when count2_atraso(2 downto 0) = "110" else
+              relu(509 downto 493);     
+              
+   relu_mul3<= relu(50 downto 34) when count2_atraso(2 downto 0) = "000" else
+              relu(118 downto 102) when count2_atraso(2 downto 0) = "001" else
+              relu(186 downto 170) when count2_atraso(2 downto 0) = "010" else
+              relu(254 downto 238) when count2_atraso(2 downto 0) = "011" else
+              relu(322 downto 306) when count2_atraso(2 downto 0) = "100" else 
+              relu(390 downto 374) when count2_atraso(2 downto 0) = "101" else 
+              relu(458 downto 442) when count2_atraso(2 downto 0) = "110" else
+              relu(526 downto 510);    
+              
+   relu_mul4<= relu(67 downto 51) when count2_atraso(2 downto 0) = "000" else
+              relu(135 downto 119) when count2_atraso(2 downto 0) = "001" else
+              relu(203 downto 187) when count2_atraso(2 downto 0) = "010" else
+              relu(271 downto 255) when count2_atraso(2 downto 0) = "011" else
+              relu(339 downto 323) when count2_atraso(2 downto 0) = "100" else 
+              relu(407 downto 391) when count2_atraso(2 downto 0) = "101" else 
+              relu(475 downto 459) when count2_atraso(2 downto 0) = "110" else
+              relu(543 downto 527);                        
+process (clk) 
+    begin
+        if clk'event and clk='1' then 
+           count2_atraso <= count2;
+        end if;
+end process;
 -- Multiplier  1
-    hidden_sg1 <= signed(relu(16 downto 0));
     w2_sg1 <= signed(w2(7 downto 0)); 
-    mul2_sg1 <= hidden_sg1 * w2_sg1;           --Se houver erro concatenar 0 no w
+    mul2_sg1 <= w2_sg1 * relu_mul1;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 2 
-    hidden_sg2 <= signed(relu(33 downto 17));
     w2_sg2 <= signed(w2(15 downto 8)); 
-    mul2_sg2 <= hidden_sg2 * w2_sg2;           --Se houver erro concatenar 0 no w
+    mul2_sg2 <= w2_sg2 * relu_mul2;           --Se houver erro concatenar 0 no w
     
     -- Multiplier  3
-    hidden_sg3 <= signed(relu(50 downto 34));
     w2_sg3 <= signed(w2(23 downto 16)); 
-    mul2_sg3 <= hidden_sg3 * w2_sg3;           --Se houver erro concatenar 0 no w
+    mul2_sg3 <= w2_sg3 * relu_mul3;           --Se houver erro concatenar 0 no w
     
 -- Multiplier 4 
-    hidden_sg4 <= signed(relu(67 downto 51));
     w2_sg4 <= signed(w2(31 downto 24)); 
-    mul2_sg4 <= hidden_sg4 * w2_sg4;           --Se houver erro concatenar 0 no w
+    mul2_sg4 <= w2_sg4 * relu_mul4;           --Se houver erro concatenar 0 no w
     
 -- adder1
     res2_add_sg1 <= ((mul2_sg1(24) & mul2_sg1) + (mul2_sg2(24) & mul2_sg2));
