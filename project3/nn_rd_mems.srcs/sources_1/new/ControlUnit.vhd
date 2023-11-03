@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity ControlUnit is
     Port (
-        clk, rst_control,done1,done2 : in std_logic;
+        clk, rst_control,done1,done2,init : in std_logic;
         en_count1,en_count2 : out std_logic
     );
 end ControlUnit;
@@ -19,22 +19,25 @@ type fsm_states is (s_initial, s_end, CYCLE1,CYCLE2);
         state_reg: process (clk, rst_control)
         begin 
         --rst_dpath <= rst_control;
-            if clk'event and clk = '1' then
+               if clk'event and clk = '1' then
                 if rst_control = '1' then
-                    currstate <= CYCLE1 ;
+                    currstate <= s_initial ;
                 else
                     currstate <= nextstate ;
                 end if ;
             end if ;
         end process;
         
-        state_comb: process (currstate,done1,done2)
+        state_comb: process (currstate,done1,done2,init)
         begin
             nextstate <= currstate ; 
             case currstate is
                 when s_initial =>
                     en_count1 <= '0';
                     en_count2 <= '0';
+                    if init = '1' then 
+                        nextstate <= CYCLE1;
+                    end if;                  
                 when CYCLE1 =>
                     en_count1 <= '1';
                     en_count2 <= '0';

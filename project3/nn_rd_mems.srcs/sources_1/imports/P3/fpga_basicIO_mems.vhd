@@ -69,7 +69,8 @@ architecture Behavioral of fpga_basicIO_mems is
   
   component circuit
     Port ( 
-      clk, rst_control : in std_logic;
+      clk, rst_control,init : in std_logic;
+      switches :in std_logic_vector(7 downto 0);
       res: out std_logic_vector (3 downto 0)
       );
   end component;
@@ -108,12 +109,11 @@ begin
   
   digits <= digits_hexa when sw_reg(14)='0' else digits_fixedp ;
   
-  digits_hexa <= weight1_4 when sw_reg(13)='0' else
-                 weight2_4(15 downto 0) when sw_reg(12)='0' else
-                 weight2_4(31 downto 16);
+  digits_hexa <= ("000000000000") & res when sw_reg(13)='0' else
+                 ("000000000000") & ("1111") when sw_reg(12)='0' else
+                 ("00000000") & sw_reg(7 downto 0);
   digits_fixedp <= w1_fp when sw_reg(13)='0' else 
-                   w2_fp when sw_reg(12) ='0' else
-                   ("000000000000") & res; 
+                   w2_fp;
   w1_1 <= weight1_4(3 downto 0) when sw_reg(12 downto 11)="00" else 
           weight1_4(7 downto 4) when sw_reg(12 downto 11)="01" else
           weight1_4(11 downto 8) when sw_reg(12 downto 11)="10" else 
@@ -178,7 +178,9 @@ begin
 		
   inst_circuito: circuit port map(
       clk => clk,
+      switches => sw_reg(7 downto 0),
       rst_control => btnUreg,
+      init => btnDreg,
       res => res);
          
   process (clk)

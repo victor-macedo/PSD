@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="82,103.475 ns"></ZoomStartTime>
-      <ZoomEndTime time="82,162.426 ns"></ZoomEndTime>
-      <Cursor1Time time="82,130.775 ns"></Cursor1Time>
+      <ZoomStartTime time="205.300 ns"></ZoomStartTime>
+      <ZoomEndTime time="443.501 ns"></ZoomEndTime>
+      <Cursor1Time time="245.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="196"></NameColumnWidth>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
       <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -60,69 +60,25 @@
       <obj_property name="ObjectShortName">relu_teste[16:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w2_sg1" type="array">
-      <obj_property name="ElementShortName">w2_sg1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">w2_sg1[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w2_sg2" type="array">
-      <obj_property name="ElementShortName">w2_sg2[7:0]</obj_property>
-      <obj_property name="ObjectShortName">w2_sg2[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w2_sg3" type="array">
-      <obj_property name="ElementShortName">w2_sg3[7:0]</obj_property>
-      <obj_property name="ObjectShortName">w2_sg3[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/w2_sg4" type="array">
-      <obj_property name="ElementShortName">w2_sg4[7:0]</obj_property>
-      <obj_property name="ObjectShortName">w2_sg4[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/mul2_sg1" type="array">
-      <obj_property name="ElementShortName">mul2_sg1[24:0]</obj_property>
-      <obj_property name="ObjectShortName">mul2_sg1[24:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/mul2_sg2" type="array">
-      <obj_property name="ElementShortName">mul2_sg2[24:0]</obj_property>
-      <obj_property name="ObjectShortName">mul2_sg2[24:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/mul2_sg3" type="array">
-      <obj_property name="ElementShortName">mul2_sg3[24:0]</obj_property>
-      <obj_property name="ObjectShortName">mul2_sg3[24:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/mul2_sg4" type="array">
-      <obj_property name="ElementShortName">mul2_sg4[24:0]</obj_property>
-      <obj_property name="ObjectShortName">mul2_sg4[24:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/res2_add_sg1" type="array">
-      <obj_property name="ElementShortName">res2_add_sg1[25:0]</obj_property>
-      <obj_property name="ObjectShortName">res2_add_sg1[25:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/res2_add_sg2" type="array">
-      <obj_property name="ElementShortName">res2_add_sg2[25:0]</obj_property>
-      <obj_property name="ObjectShortName">res2_add_sg2[25:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/res2_add_sg3" type="array">
-      <obj_property name="ElementShortName">res2_add_sg3[26:0]</obj_property>
-      <obj_property name="ObjectShortName">res2_add_sg3[26:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/uut/inst_datapath/res2_add_sg4" type="array">
-      <obj_property name="ElementShortName">res2_add_sg4[37:0]</obj_property>
-      <obj_property name="ObjectShortName">res2_add_sg4[37:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/uut/inst_datapath/accum2" type="array">
       <obj_property name="ElementShortName">accum2[37:0]</obj_property>
       <obj_property name="ObjectShortName">accum2[37:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/init" type="logic">
+      <obj_property name="ElementShortName">init</obj_property>
+      <obj_property name="ObjectShortName">init</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/currstate" type="other">
+      <obj_property name="ElementShortName">currstate</obj_property>
+      <obj_property name="ObjectShortName">currstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/rst_control" type="logic">
+      <obj_property name="ElementShortName">rst_control</obj_property>
+      <obj_property name="ObjectShortName">rst_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/nextstate" type="other">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
    </wvobject>
 </wave_config>

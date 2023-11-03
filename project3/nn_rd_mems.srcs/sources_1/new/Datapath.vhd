@@ -4,7 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Datapath is
   Port ( 
-    clk,en_count1,en_count2 : in std_logic;
+    clk,en_count1,en_count2,rst_control : in std_logic;
+    switches :in std_logic_vector(7 downto 0);
     res : out std_logic_vector(3 downto 0) := (others => '0');
     done1,done2: out std_logic := '0'
     );
@@ -27,7 +28,6 @@ end component;
 --Signals da parte 1
 signal p : std_logic_vector (31 downto 0); 
 signal p_mul1,p_mul2,p_mul3,p_mul4: std_ulogic;
---signal p_shift : std_logic_vector (31 downto 0):= (others => '0'); 
 signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
 signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
 signal res1_add_sg3 : signed(5 downto 0);--Q0.6
@@ -49,12 +49,15 @@ signal accum2,max: signed(37 downto 0):=( others => '0'); --Q22.14
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 signal count1,count_atraso: std_logic_vector (12 downto 0) :=( others => '0');
 signal count2,count2_atraso: std_logic_vector(6 downto 0) :=( others => '0');
+signal count3 : std_logic_vector(1 downto 0) := (others => '0');
 signal w1 : std_logic_vector (15 downto 0);
 signal w2 : std_logic_vector (31 downto 0); 
 signal addrin: std_logic_vector(12 downto 0);
 
 begin
-addrin <= "00000010" & count1(7 downto 3); --TIRAR NO FINAL
+
+addrin <= switches & count1(7 downto 3); --Imagem a ser selecionada
+
 inst_datapath: mem_acesses port map (
     clk => clk, addrin => addrin,
     addrin1 =>count1, addrin2 => count2,
@@ -96,10 +99,14 @@ inst_datapath: mem_acesses port map (
               p(27) when count_atraso(2 downto 0) = "110" else
               p(31); 
                    
-process (clk) --process do done
+process (clk) --process do count_atraso
     begin
         if clk'event and clk='1' then 
-           count_atraso <= count1;
+            if rst_control = '1' then
+                count_atraso <= "0000000000000";
+            else
+                count_atraso <= count1;
+            end if;    
         end if;
 end process;
 --Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
@@ -127,27 +134,35 @@ end process;
 process (clk) --process do done
     begin
         if clk'event and clk='1' then 
+        if rst_control = '1' then
+            done1 <= '0';
+        else    
             if count1 = "1111111111111" then -- Se estiver finalizado
                 done1 <= '1';            
             end if;
+        end if;    
         end if;
 end process;
     
 process (clk)--process do relu
     begin
         if clk'event and clk='1' then 
-            if en_count2 = '1' then -- Se estiver na parte2
---                relu <= relu(67 downto 0) & relu(543 downto 68); --Shift pra parte 2 da rede
-            else --se estiver na parte1
-                if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
-                   if accum1 > 0 then
-                        relu(543 downto 527) <= accum1;
-                   else 
-                        relu(543 downto 527) <= "00000000000000000";              
-                   end if;     
-                   relu_teste <= accum1;
-                   relu(526 downto 0) <= relu (543 downto 17);     
-                end if;                           
+            if rst_control = '1' then
+                relu <= (others => '0');
+            else
+                if en_count2 = '1' then -- Se estiver na parte2
+    --                relu <= relu(67 downto 0) & relu(543 downto 68); --Shift pra parte 2 da rede
+                else --se estiver na parte1
+                    if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
+                       if accum1 > 0 then
+                            relu(543 downto 527) <= accum1;
+                       else 
+                            relu(543 downto 527) <= "00000000000000000";              
+                       end if;     
+                       --relu_teste <= accum1;
+                       relu(526 downto 0) <= relu (543 downto 17);     
+                    end if;                           
+                end if;    
             end if;    
         end if;
 end process;
@@ -155,35 +170,47 @@ end process;
 process (clk) --process do accum2
     begin
         if clk'event and clk='1' then 
-            if en_count2 = '1' then -- Se estiver na parte 2
-                if count2(2 downto 0) = "111" then --Se chegar no final do numero calculado zera o acumulador
-                    accum2 <= "00000000000000000000000000000000000000";
-                else -- Do contrario continua a soma
-                    accum2 <= res2_add_sg4;
-                end if;
-            end if;    
+            if rst_control = '1' then
+                accum2 <= (others => '0');
+            else    
+                if en_count2 = '1' then -- Se estiver na parte 2
+                    if count2(2 downto 0) = "111" then --Se chegar no final do numero calculado zera o acumulador
+                        accum2 <= "00000000000000000000000000000000000000";
+                    else -- Do contrario continua a soma
+                        accum2 <= res2_add_sg4;
+                    end if;
+                end if;  
+            end if;      
         end if;
 end process;
 
 process (clk) --process accum1
     begin
         if clk'event and clk='1' then 
-            if en_count1 = '1' then -- Se não estiver finalizado                          
-                   if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
-                        accum1 <= "00000000000000000";    
-                   else
-                        accum1 <=res1_add_sg4;                          
-                   end if;    
+            if rst_control = '1' then
+                accum1 <= (others => '0');
+            else    
+                if en_count1 = '1' then -- Se não estiver finalizado                          
+                       if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
+                            accum1 <= "00000000000000000";    
+                       else
+                            accum1 <=res1_add_sg4;                          
+                       end if;    
+                end if;           
             end if;              
     end if;       
 end process;
    
-process (clk)
+process (clk) --process do count1
     begin
         if clk'event and clk='1' then
-            if en_count1 = '1' then
-                count1 <= std_logic_vector(unsigned(count1) + 1);
-            end if;          
+            if rst_control = '1' then
+                count1 <= (others => '0');
+            else    
+                if en_count1 = '1' then
+                    count1 <= std_logic_vector(unsigned(count1) + 1);
+                end if;  
+            end if;            
       end if;   
 end process;
 
@@ -225,11 +252,16 @@ end process;
               relu(339 downto 323) when count2_atraso(2 downto 0) = "100" else 
               relu(407 downto 391) when count2_atraso(2 downto 0) = "101" else 
               relu(475 downto 459) when count2_atraso(2 downto 0) = "110" else
-              relu(543 downto 527);                        
-process (clk) 
+              relu(543 downto 527);         
+                             
+process (clk) --process count2_atraso
     begin
         if clk'event and clk='1' then 
-           count2_atraso <= count2;
+            if rst_control = '1' then
+                count2_atraso <= (others => '0');
+            else    
+               count2_atraso <= count2;
+            end if;   
         end if;
 end process;
 -- Multiplier  1
@@ -263,48 +295,82 @@ end process;
 process (clk) --process do res
     begin
         if clk'event and clk='1' then  
-               if count2="1001111" then --Quando calcula todos os neuronios mostra a saida final
+            if rst_control = '1' then
+                res <= (others => '0');
+            else    
+               if count3="11" then --Quando calcula todos os neuronios mostra a saida final
                     res <= best;        --Valor de 83 pois são 3 ciclos a mais dps que o ultimo peso entra
-               end if;       
+               end if;  
+            end if;        
         end if;
    end process;
    
+   
+process (clk) --process do res
+    begin
+        if clk'event and clk='1' then  
+            if rst_control = '1' then
+                count3 <= (others => '0');
+            else 
+                if count2="1001111" then    
+                    count3 <= std_logic_vector(unsigned(count3) + 1);
+                end if;
+           end if;
+        end if;
+end process;                    
+           
 process (clk) --process do max
 begin
     if clk'event and clk='1' then 
-       if count2(2 downto 0) = "111" then
-           if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
-                max <= accum2;          
-           end if;        
-       end if;  
+        if rst_control = '1' then
+            max <= (others => '0');
+        else    
+           if count2(2 downto 0) = "111" then
+               if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
+                    max <= accum2;          
+               end if;        
+           end if;  
+       end if;        
     end if;
 end process;
 
 process (clk)--process do best
 begin
     if clk'event and clk='1' then 
-       if count2(2 downto 0) = "111" then
-           if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
-                best <= std_logic_vector(unsigned(count2(6 downto 3)));--Salva o valor do contador, o qual representa o numero de saida       
-           end if;   
-       end if;  
-    end if;
+        if rst_control = '1' then
+            best <= (others => '0');
+        else    
+           if count2(2 downto 0) = "111" then
+               if accum2 > max then   --Usar um registrador para armazenar o antigo maior valor, se o atual for maior atualizar e guardar o numero da contagem
+                    best <= std_logic_vector(unsigned(count2(6 downto 3)));--Salva o valor do contador, o qual representa o numero de saida       
+               end if;   
+           end if;  
+        end if;
+    end if;    
 end process;
    
 process (clk) --process do count2
 begin
     if clk'event and clk='1' then
-           if en_count2 = '1' then
-                count2 <= std_logic_vector(unsigned(count2) + 1);
-            end if;          
-    end if;
+        if rst_control = '1' then
+            count2 <= (others => '0');
+        else    
+               if en_count2 = '1' then
+                    count2 <= std_logic_vector(unsigned(count2) + 1);
+                end if;          
+        end if;
+    end if;    
 end process;
-process (clk) --process do done
+process (clk) --process do done2
     begin
         if clk'event and clk='1' then 
-            if count2="1001101" then -- Se estiver finalizado
-                done2 <= '1';        --Deve parar um clock antes pois ha atraso de um ciclo    
+            if rst_control = '1' then
+                done2 <= '0';
+            else    
+                if count2="1001101" then -- Se estiver finalizado
+                    done2 <= '1';        --Deve parar um clock antes pois ha atraso de um ciclo    
+                end if;
             end if;
-        end if;
+        end if;    
 end process;
 end Behavioral;

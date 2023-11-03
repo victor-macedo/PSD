@@ -61,7 +61,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="basys3"/>
-    <Option Name="WTXSimLaunchSim" Val="200"/>
+    <Option Name="WTXSimLaunchSim" Val="213"/>
     <Option Name="WTModelSimLaunchSim" Val="1"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -222,11 +222,6 @@
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../P3/rd_mems_tb.vhd"/>
           <Attr Name="ImportTime" Val="1696535327"/>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../../OneDrive - Universidade de Lisboa/Documentos/Faculdade/PSD/Projeto3_limpo/nn_rd_mems.xpr/nn_rd_mems/testbench_pw1w2.wcfg">
-        <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
