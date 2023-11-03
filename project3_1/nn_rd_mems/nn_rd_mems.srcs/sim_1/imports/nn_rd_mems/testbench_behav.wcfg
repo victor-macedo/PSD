@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="82,318.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="83,917.501 ns"></ZoomEndTime>
+      <Cursor1Time time="82,831.500 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/res" type="array">
+      <obj_property name="ElementShortName">res[3:0]</obj_property>
+      <obj_property name="ObjectShortName">res[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/p" type="array">
+      <obj_property name="ElementShortName">p[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/count1" type="array">
+      <obj_property name="ElementShortName">count1[12:0]</obj_property>
+      <obj_property name="ObjectShortName">count1[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/count2" type="array">
+      <obj_property name="ElementShortName">count2[6:0]</obj_property>
+      <obj_property name="ObjectShortName">count2[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/accum2" type="array">
+      <obj_property name="ElementShortName">accum2[37:0]</obj_property>
+      <obj_property name="ObjectShortName">accum2[37:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/best" type="array">
+      <obj_property name="ElementShortName">best[3:0]</obj_property>
+      <obj_property name="ObjectShortName">best[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/max" type="array">
+      <obj_property name="ElementShortName">max[37:0]</obj_property>
+      <obj_property name="ObjectShortName">max[37:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/relu_teste" type="array">
+      <obj_property name="ElementShortName">relu_teste[16:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_teste[16:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/accum2" type="array">
+      <obj_property name="ElementShortName">accum2[37:0]</obj_property>
+      <obj_property name="ObjectShortName">accum2[37:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/init" type="logic">
+      <obj_property name="ElementShortName">init</obj_property>
+      <obj_property name="ObjectShortName">init</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/currstate" type="other">
+      <obj_property name="ElementShortName">currstate</obj_property>
+      <obj_property name="ObjectShortName">currstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/rst_control" type="logic">
+      <obj_property name="ElementShortName">rst_control</obj_property>
+      <obj_property name="ObjectShortName">rst_control</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_control/nextstate" type="other">
+      <obj_property name="ElementShortName">nextstate</obj_property>
+      <obj_property name="ObjectShortName">nextstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/inst_datapath/relu" type="array">
+      <obj_property name="ElementShortName">relu[543:0]</obj_property>
+      <obj_property name="ObjectShortName">relu[543:0]</obj_property>
+   </wvobject>
+</wave_config>

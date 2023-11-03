@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Fri Nov  3 16:55:27 2023
+| Host         : Lari running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file fpga_basicIO_mems_control_sets_placed.rpt
+| Design       : fpga_basicIO_mems
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              43 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              53 |           19 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             665 |          166 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                 Enable Signal                 |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | inst_circuito/inst_datapath/res[3]_i_1_n_0    | btnUreg                                        |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | inst_circuito/inst_control/en_count2          | btnUreg                                        |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG |                                               | btnUreg                                        |                9 |             13 |         1.44 |
+|  clk_IBUF_BUFG | inst_circuito/inst_control/en_count1          | btnUreg                                        |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG | inst_circuito/inst_datapath/relu[543]_i_2_n_0 | inst_circuito/inst_control/SR[0]               |                9 |             17 |         1.89 |
+|  clk_IBUF_BUFG | inst_circuito/inst_control/en_count1          | inst_circuito/inst_datapath/accum1[16]_i_1_n_0 |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG |                                               | Inst_btn_debounce/sig_cntrs_ary[0][0]_i_1_n_0  |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG |                                               | Inst_btn_debounce/sig_cntrs_ary[3][0]_i_1_n_0  |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG | inst_circuito/inst_control/en_count2          | inst_circuito/inst_datapath/accum2[0]_i_1_n_0  |               10 |             38 |         3.80 |
+|  clk_IBUF_BUFG | inst_circuito/inst_datapath/best_0            | btnUreg                                        |               12 |             42 |         3.50 |
+|  clk_IBUF_BUFG |                                               |                                                |               21 |             43 |         2.05 |
+|  clk_IBUF_BUFG | inst_circuito/inst_datapath/relu[543]_i_2_n_0 | btnUreg                                        |              122 |            527 |         4.32 |
++----------------+-----------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+
+
