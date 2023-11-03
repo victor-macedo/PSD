@@ -28,23 +28,23 @@ end component;
 signal p : std_logic_vector (31 downto 0); 
 signal p_mul1,p_mul2,p_mul3,p_mul4: std_ulogic;
 --signal p_shift : std_logic_vector (31 downto 0):= (others => '0'); 
-signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --Multiplicação de 1bit por 4bits --Q-2.6
+signal mul1_1, mul1_2, mul1_3, mul1_4 : signed (3 downto 0);  --MultiplicaÃ§Ã£o de 1bit por 4bits --Q-2.6
 signal res1_add_sg1, res1_add_sg2, res_add1: signed(4 downto 0); --Q-1.6
 signal res1_add_sg3 : signed(5 downto 0);--Q0.6
-signal res1_add_sg4 : signed(16 downto 0);--Q10.6
-signal accum1,relu_teste: signed(16 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits --Q10.6
-signal relu: signed(543 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
+signal res1_add_sg4 : signed(15 downto 0);--Q10.6
+signal accum1,relu_teste: signed(15 downto 0):=( others => '0'); -- somatorio de 1024 (2**10) de numeros signed 4 bits --Q10.6
+signal relu: signed(511 downto 0):=( others => '0'); -- O vetor relu possui 512 bits pois possui os 32(n de neuronios)*16(acumuladores)
 
 --Signals da parte 2
-signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(16 downto 0);
-signal relu_mul1,relu_mul2,relu_mul3,relu_mul4 :signed(16 downto 0);
+signal hidden_sg1,hidden_sg2,hidden_sg3,hidden_sg4 : signed(15 downto 0);
+signal relu_mul1,relu_mul2,relu_mul3,relu_mul4 :signed(15 downto 0);
 signal w2_sg1,w2_sg2,w2_sg3,w2_sg4 : signed(7 downto 0); --Q0.8
-signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (24 downto 0); --Sim, pois agora é a multiplicação de 16 bits por 8 bits --Q10.14
-signal res2_add_sg1, res2_add_sg2 : signed(25 downto 0); --soma de dois de 24 --Q11.14
-signal res2_add_sg3 : signed(26 downto 0); --soma de dois de 25 --Q12.14
-signal res2_add_sg4 : signed (37 downto 0); --Conferir tamanho do vetor --Q22.14
+signal mul2_sg1,mul2_sg2,mul2_sg3,mul2_sg4: signed (23 downto 0); --Sim, pois agora Ã© a multiplicaÃ§Ã£o de 16 bits por 8 bits --Q10.14
+signal res2_add_sg1, res2_add_sg2 : signed(24 downto 0); --soma de dois de 24 --Q11.14
+signal res2_add_sg3 : signed(25 downto 0); --soma de dois de 25 --Q12.14
+signal res2_add_sg4 : signed (35 downto 0); --Conferir tamanho do vetor --Q22.14
 --signal res2_add4 : std_logic_vector (35 downto 0); --Q22.14
-signal accum2,max: signed(37 downto 0):=( others => '0'); --Q22.14
+signal accum2,max: signed(35 downto 0):=( others => '0'); --Q22.14
 
 signal best : std_logic_vector(3 downto 0):=( others => '0');
 signal count1,count_atraso: std_logic_vector (12 downto 0) :=( others => '0');
@@ -102,7 +102,7 @@ process (clk) --process do done
            count_atraso <= count1;
         end if;
 end process;
---Mux1 entrada Por se tratar de uma multiplicação de 0 e 1 um mux é mais adequado
+--Mux1 entrada Por se tratar de uma multiplicaÃ§Ã£o de 0 e 1 um mux Ã© mais adequado
 
     mul1_1 <= "0000" when p_mul1 = '0' else
             signed(w1(3 downto 0));
@@ -141,12 +141,12 @@ process (clk)--process do relu
             else --se estiver na parte1
                 if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
                    if accum1 > 0 then
-                        relu(543 downto 527) <= accum1;
+                        relu(511 downto 496) <= accum1;
                    else 
-                        relu(543 downto 527) <= "00000000000000000";              
+                        relu(511 downto 496) <= "00000000000000000";              
                    end if;     
                    relu_teste <= accum1;
-                   relu(526 downto 0) <= relu (543 downto 17);     
+                   relu(495 downto 0) <= relu (511 downto 16);     
                 end if;                           
             end if;    
         end if;
@@ -168,7 +168,7 @@ end process;
 process (clk) --process accum1
     begin
         if clk'event and clk='1' then 
-            if en_count1 = '1' then -- Se não estiver finalizado                          
+            if en_count1 = '1' then -- Se nÃ£o estiver finalizado                          
                    if count1 (7 downto 0) = "11111111" then --CHegou no final do calculo do neuronio
                         accum1 <= "00000000000000000";    
                    else
@@ -189,43 +189,43 @@ end process;
 
 --Para a parte 2 do projeto o funcionamento vai ser semelhante ao primeiro 
 --Devera ser usado um contador de 3 bits, que incrementa com w2, ao chegar no valorz
---`111` ao invés de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
+--`111` ao invÃ©s de trocar o valor de p, como feito na parte 1 deve se trocar o somador final
 
-    relu_mul1 <= relu(16 downto 0) when count2_atraso(2 downto 0) = "000" else
-              relu(84 downto 68) when count2_atraso(2 downto 0) = "001" else
-              relu(152 downto 136) when count2_atraso(2 downto 0) = "010" else
-              relu(220 downto 204) when count2_atraso(2 downto 0) = "011" else
-              relu(288 downto 272) when count2_atraso(2 downto 0) = "100" else 
-              relu(356 downto 340) when count2_atraso(2 downto 0) = "101" else 
-              relu(424 downto 408) when count2_atraso(2 downto 0) = "110" else
-              relu(492 downto 476);
+    relu_mul1 <= relu(15 downto 0) when count2_atraso(2 downto 0) = "000" else
+              relu(79 downto 64) when count2_atraso(2 downto 0) = "001" else
+              relu(143 downto 128) when count2_atraso(2 downto 0) = "010" else
+              relu(207 downto 192) when count2_atraso(2 downto 0) = "011" else
+              relu(271 downto 256) when count2_atraso(2 downto 0) = "100" else 
+              relu(335 downto 320) when count2_atraso(2 downto 0) = "101" else 
+              relu(399 downto 384) when count2_atraso(2 downto 0) = "110" else
+              relu(463 downto 448);
               
-   relu_mul2 <= relu(33 downto 17) when count2_atraso(2 downto 0) = "000" else
-              relu(101 downto 85) when count2_atraso(2 downto 0) = "001" else
-              relu(169 downto 153) when count2_atraso(2 downto 0) = "010" else
-              relu(237 downto 221) when count2_atraso(2 downto 0) = "011" else
-              relu(305 downto 289) when count2_atraso(2 downto 0) = "100" else 
-              relu(373 downto 357) when count2_atraso(2 downto 0) = "101" else 
-              relu(441 downto 425) when count2_atraso(2 downto 0) = "110" else
-              relu(509 downto 493);     
+   relu_mul2 <= relu(31 downto 16) when count2_atraso(2 downto 0) = "000" else
+              relu(95 downto 80) when count2_atraso(2 downto 0) = "001" else
+              relu(159 downto 144) when count2_atraso(2 downto 0) = "010" else
+              relu(223 downto 208) when count2_atraso(2 downto 0) = "011" else
+              relu(287 downto 272) when count2_atraso(2 downto 0) = "100" else 
+              relu(351 downto 336) when count2_atraso(2 downto 0) = "101" else 
+              relu(415 downto 400) when count2_atraso(2 downto 0) = "110" else
+              relu(479 downto 464);     
               
-   relu_mul3<= relu(50 downto 34) when count2_atraso(2 downto 0) = "000" else
-              relu(118 downto 102) when count2_atraso(2 downto 0) = "001" else
-              relu(186 downto 170) when count2_atraso(2 downto 0) = "010" else
-              relu(254 downto 238) when count2_atraso(2 downto 0) = "011" else
-              relu(322 downto 306) when count2_atraso(2 downto 0) = "100" else 
-              relu(390 downto 374) when count2_atraso(2 downto 0) = "101" else 
-              relu(458 downto 442) when count2_atraso(2 downto 0) = "110" else
-              relu(526 downto 510);    
+   relu_mul3<= relu(47 downto 32) when count2_atraso(2 downto 0) = "000" else
+              relu(111 downto 96) when count2_atraso(2 downto 0) = "001" else
+              relu(175 downto 160) when count2_atraso(2 downto 0) = "010" else
+              relu(239 downto 224) when count2_atraso(2 downto 0) = "011" else
+              relu(303 downto 288) when count2_atraso(2 downto 0) = "100" else 
+              relu(367 downto 352) when count2_atraso(2 downto 0) = "101" else 
+              relu(431 downto 416) when count2_atraso(2 downto 0) = "110" else
+              relu(495 downto 480);    
               
-   relu_mul4<= relu(67 downto 51) when count2_atraso(2 downto 0) = "000" else
-              relu(135 downto 119) when count2_atraso(2 downto 0) = "001" else
-              relu(203 downto 187) when count2_atraso(2 downto 0) = "010" else
-              relu(271 downto 255) when count2_atraso(2 downto 0) = "011" else
-              relu(339 downto 323) when count2_atraso(2 downto 0) = "100" else 
-              relu(407 downto 391) when count2_atraso(2 downto 0) = "101" else 
-              relu(475 downto 459) when count2_atraso(2 downto 0) = "110" else
-              relu(543 downto 527);                        
+   relu_mul4<= relu(63 downto 48) when count2_atraso(2 downto 0) = "000" else
+              relu(127 downto 112) when count2_atraso(2 downto 0) = "001" else
+              relu(191 downto 176) when count2_atraso(2 downto 0) = "010" else
+              relu(255 downto 240) when count2_atraso(2 downto 0) = "011" else
+              relu(319 downto 304) when count2_atraso(2 downto 0) = "100" else 
+              relu(383 downto 368) when count2_atraso(2 downto 0) = "101" else 
+              relu(447 downto 432) when count2_atraso(2 downto 0) = "110" else
+              relu(511 downto 496);                        
 process (clk) 
     begin
         if clk'event and clk='1' then 
@@ -249,13 +249,13 @@ end process;
     mul2_sg4 <= w2_sg4 * relu_mul4;           --Se houver erro concatenar 0 no w
     
 -- adder1
-    res2_add_sg1 <= ((mul2_sg1(24) & mul2_sg1) + (mul2_sg2(24) & mul2_sg2));
+    res2_add_sg1 <= ((mul2_sg1(23) & mul2_sg1) + (mul2_sg2(23) & mul2_sg2));
     
 -- adder2
-    res2_add_sg2 <= ((mul2_sg3(24) & mul2_sg3) + (mul2_sg4(24) & mul2_sg4));
+    res2_add_sg2 <= ((mul2_sg3(23) & mul2_sg3) + (mul2_sg4(23) & mul2_sg4));
     
 -- adder3
-    res2_add_sg3 <= ((res2_add_sg2(25) & res2_add_sg2) + (res2_add_sg1(25) & res2_add_sg1));
+    res2_add_sg3 <= ((res2_add_sg2(24) & res2_add_sg2) + (res2_add_sg1(24) & res2_add_sg1));
     
 -- adder4
     res2_add_sg4 <= (accum2 + res2_add_sg3);
@@ -264,7 +264,7 @@ process (clk) --process do res
     begin
         if clk'event and clk='1' then  
                if count2="1001111" then --Quando calcula todos os neuronios mostra a saida final
-                    res <= best;        --Valor de 83 pois são 3 ciclos a mais dps que o ultimo peso entra
+                    res <= best;        --Valor de 83 pois sÃ£o 3 ciclos a mais dps que o ultimo peso entra
                end if;       
         end if;
    end process;
